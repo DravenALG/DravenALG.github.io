@@ -3,6 +3,18 @@
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <style>
+        @media screen and (max-width: 750px) {
+            .remove_in_pad{
+                display:none;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .remove_in_phone{
+                display:none;
+            }
+        }
+    </style>
 </head>
 <body>
 {{ content }}
