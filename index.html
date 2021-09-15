@@ -1,7 +1,66 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+---
+layout: default
+title: Xiao-Ming Wu (Draven)
+---
+
+<div class="head">
+    <img style="float:left;padding: 12px" src="assets\image\myself.jpg" width="200"/>
+    <div style="float:left;">
+        <h2>Xiao-Ming Wu (伍晓鸣)</h2>
+        <div style="  font-size: 16px;padding: 0px;margin: 0px;">
+        <p>B.E. Student, <a href="http://mima.sdu.edu.cn/" target="_blank">MIMA laboratory</a></p>
+        <p>Software Engineering, <a href="https://www.sc.sdu.edu.cn/" target="_blank">School of Software</a></p>
+        <p><a href="https://www.sdu.edu.cn/" target="_blank">Shandong University</a></p>
+        <br>
+        <p>Email: wuxiaoming.alg@gmail.com</p>
+        <p><a href="https://github.com/DravenALG" target="_blank"><img class="head1" id="github" src="assets\image\GitHub.png" width="25"/></a></p>
+        </div>
+    </div>
+    <img style=" float:right;" src="assets\image\sdu.jpg" width="150"/>
+</div>
+
+
+<div style="clear: both">
+    <br>
+    <hr>
+    <h2 style="color: brown;">Biography</h2>
+    <p>
+        I am currently an undergraduate student at <a href="https://www.sdu.edu.cn/" target="_blank">Shandong University</a> and I am pursuing a master's degree.
+        <br>
+        <br>
+        During my undergraduate study, I worked as a research assistant in the <a href="http://mima.sdu.edu.cn/" target="_blank">MIMA laboratory</a> in Shandong University, following assistant professor <a href="https://faculty.sdu.edu.cn/luoxin/zh_CN/index.htm" target="_blank">Xin Luo</a>. During this period, I mainly work on hashing retrieval.
+    </p>
+</div>
+
+
+<div>
+    <h2 style="color: brown;">Research Interest</h2>
+    <ul>
+        <li>Machine Learning</li>
+        <li>Computer Vision</li>
+        <li>Information Retrieval</li>
+    </ul>
+</div>
+
+<div>
+    <h2 style="color: brown;">Publication</h2>
+    <ul>
+        {% for paper in site.data.publish %}
+        <li>
+            <div><span style='text-decoration: underline;font-weight: bold;'>{{paper.title}}</span> <a href={{paper.pdf}} target="_blank">[PDF]</a></div>
+            <div>{{paper.author | replace: "Xiao-Ming Wu", "<span style='text-decoration: underline;font-weight: bold;'>Xiao-Ming Wu</span>" }}</div>
+            <div>In: {{paper.in}}, {{paper.pub_info}}, {{paper.year}}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+    <h2 style="color: brown;">Award</h2>
+    <p></p>
+</div>
+
+<div>
+    <h2 style="color: brown;">Service</h2>
+    <p></p>
+</div>
