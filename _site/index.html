@@ -4,45 +4,67 @@
     <meta charset="utf-8">
     <title>Xiao-Ming Wu (Draven)</title>
     <style>
-        @media screen and (max-width: 750px) {
-            .remove_in_pad{
-                display:none;
+        @media screen and (max-width: 1000px) {
+            .remove_photo{
+                display: none;
             }
         }
-        @media screen and (max-width: 600px) {
-            .remove_in_phone{
-                display:none;
+        @media screen and (max-width: 730px) {
+            #myself{
+                display: none;
             }
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        a:link {
+            color: #0370EA;
+        }
+        a:visited {
+            color: #0370EA;
+        }
+        a:hover {
+            color: #0052ad;
+        }
+        a:active {
+            color: #0370EA;
+        }
+        li{
+            padding: 2px;
         }
     </style>
 </head>
 <body>
 <div class="head">
-    <img style="float:left;padding: 12px" src="assets\image\myself.jpg" width="200" class="remove_in_phone"/>
+    <img style="float:left;padding-right: 20px;border-radius: 50px" src="assets\image\myself.jpg" width="200" id="myself"/>
     <div style="float:left;">
-        <h2>Xiao-Ming Wu (伍晓鸣)</h2>
+        <h2 style="padding: 0px;margin: 0px">Xiao-Ming Wu (伍晓鸣)</h2>
         <div style="  font-size: 16px;padding: 0px;margin: 0px;">
-        <p>B.E. Student, <a href="http://mima.sdu.edu.cn/" target="_blank">MIMA laboratory</a></p>
-        <p>Software Engineering, <a href="https://www.sc.sdu.edu.cn/" target="_blank">School of Software</a></p>
-        <p><a href="https://www.sdu.edu.cn/" target="_blank">Shandong University</a></p>
-        <br>
-        <p>Email: wuxiaoming.alg@gmail.com</p>
-        <p><a href="https://github.com/DravenALG" target="_blank"><img class="head1" id="github" src="assets\image\GitHub.png" width="25"/></a></p>
+            <p>M.S. Student, <a href="http://www.isee-ai.cn/" target="_blank">ISEE laboratory</a></p>
+            <p>Computer Science, <a href="https://cse.sysu.edu.cn/" target="_blank">School of Computer Science and Engineering</a></p>
+            <p><a href="http://www.sysu.edu.cn/cn/" target="_blank">Sun Yet-Sen University</a></p>
+            <br>
+            <p>Email: wuxiaoming.alg@gmail.com</p>
+            <p>
+                <a href="https://github.com/DravenALG" target="_blank"><img class="head1" id="github" src="assets\image\github.png" onmouseover="this.src='assets\\image\\github2.png'" onmouseout="this.src='assets\\image\\github.png'" width="30"/></a>
+                <a href="https://scholar.google.com/citations?hl=zh-CN&user=Li7oZpsAAAAJ" target="_blank"><img class="head1" id="google" src="assets\image\google.png" onmouseover="this.src='assets\\image\\google2.png'" onmouseout="this.src='assets\\image\\google.png'" width="30"/></a>
+            </p>
         </div>
     </div>
-    <img style="float:right;" src="assets\image\sdu.jpg" width="150" class="remove_in_pad"/>
+    <div style="float:right;" class="remove_photo">
+        <img src="assets\image\isee.jpg" width="100" style="display:block;padding-left: 50px"/>
+        <img src="assets\image\sysu.jpg" width="200" style="display:block;"/>
+    </div>
 </div>
 
 
 <div style="clear: both">
-    <br>
     <hr>
     <h2 style="color: brown;">Biography</h2>
     <p>
-        I am currently an undergraduate student at <a href="https://www.sdu.edu.cn/" target="_blank">Shandong University</a>, and I will continue to pursue a master's degree at <a href="http://www.sysu.edu.cn/cn/index.htm" target="_blank">Sun Yat-Sen University</a>.
+        I am currently a master student at <a href="http://www.sysu.edu.cn/cn/" target="_blank">Sun Yet-Sen University</a>. As a graduate student, I follow Professor <a href="http://www.isee-ai.cn/~zhwshi/" target="_blank">Wei-Shi Zheng</a> and mainly work on computer vision and network compression.
         <br>
-        <br>
-        As a graduate student, I follow professor <a href="http://www.isee-ai.cn/~zhwshi/" target="_blank">Wei-Shi Zheng</a> and mainly work on computer vision and network compression. During my undergraduate study, I worked as a research assistant in the <a href="http://mima.sdu.edu.cn/" target="_blank">MIMA laboratory</a> in Shandong University, following assistant professor <a href="https://faculty.sdu.edu.cn/luoxin/zh_CN/index.htm" target="_blank">Xin Luo</a>. During this period, I mainly work on hashing retrieval.
+        During my undergraduate study in <a href="https://www.sdu.edu.cn/" target="_blank">Shandong University</a>, I worked with Assistant Professor <a href="https://faculty.sdu.edu.cn/luoxin/zh_CN/index.htm" target="_blank">Xin Luo</a> and mainly worked on hashing retrieval.
     </p>
 </div>
 
@@ -58,17 +80,30 @@
 
 <div>
     <h2 style="color: brown;">Publication</h2>
+    <p>Represented works will be highlight.</p>
     <ul>
         
         <li>
-            <div><span style='text-decoration: underline;font-weight: bold;'>Online Enhanced Semantic Hashing Towards Effective and Efficient Retrieval for Streaming Multi-Modal Data.</span> <a href=assets/publish/2021-arVix-OASIS-Online_Enhanced_Semantic_Hashing_Towards_Effective_and_Efficient_Retrieval.pdf target="_blank">[PDF]</a></div>
-            <div><span style='text-decoration: underline;font-weight: bold;'>Xiao-Ming Wu</span>, Xin Luo, Yu-Wei Zhan, Chen-Lu Ding, Zhen-Duo Chen, Xin-Shun Xu.</div>
+            <div>
+                <span style='font-weight: bold;'>Online Enhanced Semantic Hashing Towards Effective and Efficient Retrieval for Streaming Multi-Modal Data.</span>
+                 <a href=assets/publish/2021-arVix-OASIS-Online_Enhanced_Semantic_Hashing_Towards_Effective_and_Efficient_Retrieval.pdf target="_blank">[PDF]</a> 
+                
+                
+                
+            </div>
+            <div><span style='font-weight: bold;'>Xiao-Ming Wu</span>, Xin Luo, Yu-Wei Zhan, Chen-Lu Ding, Zhen-Duo Chen, Xin-Shun Xu.</div>
             <div>In: AAAI, 2022</div>
         </li>
         
         <li>
-            <div><span style='text-decoration: underline;font-weight: bold;'>Discrete Online Cross-Modal Hashing.</span> <a href=assets/publish/2021-PR-DOCH-Discrete_online_cross-modal_hashing.pdf target="_blank">[PDF]</a></div>
-            <div>Yu-Wei Zhan, Yong-Xin Wang, Yu Sun, <span style='text-decoration: underline;font-weight: bold;'>Xiao-Ming Wu</span>, Xin Luo*, and Xin-Shun Xu.</div>
+            <div>
+                <span style='font-weight: bold;'>Discrete Online Cross-Modal Hashing.</span>
+                 <a href=assets/publish/2021-PR-DOCH-Discrete_online_cross-modal_hashing.pdf target="_blank">[PDF]</a> 
+                
+                
+                
+            </div>
+            <div>Yu-Wei Zhan, Yong-Xin Wang, Yu Sun, <span style='font-weight: bold;'>Xiao-Ming Wu</span>, Xin Luo*, and Xin-Shun Xu.</div>
             <div>In: Pattern Recognition(PR), 2021</div>
         </li>
         
@@ -97,9 +132,9 @@
     </ul>
 </div>
 
-<div>
-    <h2 style="color: brown;">Service</h2>
-    <p>None</p>
-</div>
+<!--<div>-->
+<!--    <h2 style="color: brown;">Service</h2>-->
+<!--    <p>None</p>-->
+<!--</div>-->
 </body>
 </html>
