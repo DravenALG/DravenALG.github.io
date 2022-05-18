@@ -36,6 +36,25 @@ title: Xiao-Ming Wu (Draven)
     </p>
 </div>
 
+<div>
+    <h2 style="color: brown;">Education</h2>
+    <ul style="padding-left: 0px; margin-left: 0px;">
+        {% for school in site.data.education %}
+        <li class="education">
+            <div>
+                {{school.degree}} in {{school.major}}
+            </div>
+            <div>
+                {{school.year}}
+            </div>
+            <div class="school">
+                {{school.school}}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
 
 <div>
     <h2 style="color: brown;">Research Interest</h2>
