@@ -2,6 +2,7 @@
   title: Weakly-Supervised Online Hashing with Refined Pseudo Tags.
   in: ACM International Conference on Information and Knowledge Management (CIKM)
   year: 2022
+  pdf: https://dl.acm.org/doi/abs/10.1145/3511808.3557488
 
 - author: Xiao-Ming Wu, Xin Luo*, Yu-Wei Zhan, Chen-Lu Ding, Zhen-Duo Chen, Xin-Shun Xu.
   title: Online Enhanced Semantic Hashing Towards Effective and Efficient Retrieval for Streaming Multi-Modal Data.
