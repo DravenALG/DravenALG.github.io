@@ -1,9 +1,3 @@
-- author: Zuhao Liu, Xiao-Ming Wu, Dian Zheng, Kun-Yu Lin, Wei-Shi Zheng*.
-  title: Generating Anomalies for Video Anomaly Detection With Prompt-Based Feature Mapping.
-  in: CVPR
-  year: 2022
-  pdf: https://openaccess.thecvf.com/content/CVPR2023/html/Liu_Generating_Anomalies_for_Video_Anomaly_Detection_With_Prompt-Based_Feature_Mapping_CVPR_2023_paper.html
-
 - author: Chen-Lu Ding, Xin Luo*, Xiao-Ming Wu, Yu-Wei Zhan, Rui Li, Hui Zhang, and Xin-Shun Xu.
   title: Weakly-Supervised Online Hashing with Refined Pseudo Tags.
   in: CIKM
