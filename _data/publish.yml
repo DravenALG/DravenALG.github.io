@@ -1,3 +1,8 @@
+- author: Xiao-Ming Wu, Dian Zheng, Zu-Hao Liu, Wei-Shi Zheng.
+  title: "Estimator Meets Equilibrium Perspective: A Rectified Straight Through Estimator for Binary Neural Networks Training."
+  in: ICCV
+  year: 2023
+
 - author: Chen-Lu Ding, Xin Luo*, Xiao-Ming Wu, Yu-Wei Zhan, Rui Li, Hui Zhang, and Xin-Shun Xu.
   title: Weakly-Supervised Online Hashing with Refined Pseudo Tags.
   in: CIKM
