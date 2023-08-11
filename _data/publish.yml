@@ -4,22 +4,28 @@
   year: 2023
   code: https://github.com/DravenALG/ReSTE
 
+- author: Zuhao Liu, Xiao-Ming Wu, Dian Zheng, Kun-Yu Lin, Wei-Shi Zheng*.
+  title: "Generating Anomalies for Video Anomaly Detection with Prompt-based Feature Mapping."
+  in: CVPR
+  year: 2023
+  pdf: https://openaccess.thecvf.com/content/CVPR2023/html/Liu_Generating_Anomalies_for_Video_Anomaly_Detection_With_Prompt-Based_Feature_Mapping_CVPR_2023_paper.html
+
 - author: Chen-Lu Ding, Xin Luo*, Xiao-Ming Wu, Yu-Wei Zhan, Rui Li, Hui Zhang, and Xin-Shun Xu.
-  title: Weakly-Supervised Online Hashing with Refined Pseudo Tags.
+  title: "Weakly-Supervised Online Hashing with Refined Pseudo Tags."
   in: CIKM
   year: 2022
   pdf: https://dl.acm.org/doi/abs/10.1145/3511808.3557488
   code: https://github.com/oceanoceanna/WOH-RPT
 
 - author: Xiao-Ming Wu, Xin Luo*, Yu-Wei Zhan, Chen-Lu Ding, Zhen-Duo Chen, Xin-Shun Xu.
-  title: Online Enhanced Semantic Hashing Towards Effective and Efficient Retrieval for Streaming Multi-Modal Data.
+  title: "Online Enhanced Semantic Hashing Towards Effective and Efficient Retrieval for Streaming Multi-Modal Data."
   in: AAAI
   year: 2022
   pdf: https://ojs.aaai.org/index.php/AAAI/article/view/20346
   code: https://github.com/DravenALG/OASIS
 
 - author: Yu-Wei Zhan, Yong-Xin Wang, Yu Sun, Xiao-Ming Wu, Xin Luo*, and Xin-Shun Xu.
-  title: Discrete Online Cross-Modal Hashing.
+  title: "Discrete Online Cross-Modal Hashing."
   in: Pattern Recognition
   year: 2021
   pdf: https://www.sciencedirect.com/science/article/abs/pii/S0031320321004428
