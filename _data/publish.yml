@@ -15,7 +15,6 @@
   in: CIKM
   year: 2022
   pdf: https://dl.acm.org/doi/abs/10.1145/3511808.3557488
-  code: https://github.com/oceanoceanna/WOH-RPT
 
 - author: Xiao-Ming Wu, Xin Luo*, Yu-Wei Zhan, Chen-Lu Ding, Zhen-Duo Chen, Xin-Shun Xu.
   title: "Online Enhanced Semantic Hashing Towards Effective and Efficient Retrieval for Streaming Multi-Modal Data."
@@ -29,4 +28,3 @@
   in: Pattern Recognition
   year: 2021
   pdf: https://www.sciencedirect.com/science/article/abs/pii/S0031320321004428
-  code: https://github.com/yw-zhan/DOCH
