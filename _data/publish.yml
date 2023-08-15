@@ -2,6 +2,7 @@
   title: "Estimator Meets Equilibrium Perspective: A Rectified Straight Through Estimator for Binary Neural Networks Training."
   in: ICCV
   year: 2023
+  pdf: https://arxiv.org/abs/2308.06689
   code: https://github.com/DravenALG/ReSTE
 
 - author: Zuhao Liu, Xiao-Ming Wu, Dian Zheng, Kun-Yu Lin, Wei-Shi Zheng*.
