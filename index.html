@@ -112,7 +112,13 @@ title: Xiao-Ming Wu (Draven)
     </ul>
 </div>
 
-<!--<div>-->
-<!--    <h2 style="color: brown;">Service</h2>-->
-<!--    <p>None</p>-->
-<!--</div>-->
+<div>
+    <h2 style="color: brown;">Service</h2>
+    <ul>
+        {% for service in site.data.service %}
+        <li>
+            <div> {{service.duty}} in {{service.name}}, {{service.year}}.</div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
