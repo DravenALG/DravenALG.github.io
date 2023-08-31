@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Xiao-Ming Wu (Draven)
+title: Xiao-Ming Wu (伍晓鸣)
 ---
 
 <div class="head">
@@ -88,18 +88,24 @@ title: Xiao-Ming Wu (Draven)
     </ul>
 </div>
 
-<!--<div>-->
-<!--    <h2 style="color: brown;">Manuscript</h2>-->
-<!--    <ul>-->
-<!--        {% for paper in site.data.manuscript %}-->
-<!--        <li>-->
-<!--            <div><span style='text-decoration: underline;font-weight: bold;'>{{paper.title}}</span> <a href={{paper.pdf}} target="_blank">[PDF]</a></div>-->
-<!--            <div>{{paper.author | replace: "Xiao-Ming Wu", "<span style='text-decoration: underline;font-weight: bold;'>Xiao-Ming Wu</span>" }}</div>-->
-<!--            <div>In: {{paper.in}}, {{paper.year}}</div>-->
-<!--        </li>-->
-<!--        {% endfor %}-->
-<!--    </ul>-->
-<!--</div>-->
+<div>
+    <h2 style="color: brown;">Manuscript</h2>
+    <ul>
+        {% for paper in site.data.manuscript %}
+        <li class="publish">
+            <div>
+                <span style='font-weight: bold;'>{{paper.title}}</span>
+                {% if paper.pdf %} <a href={{paper.pdf}} target="_blank">[Paper]</a> {% endif %}
+                {% if paper.code %} <a href={{paper.code}} target="_blank">[Code]</a> {% endif %}
+                {% if paper.page %} <a href={{paper.page}} target="_blank">[Page]</a> {% endif %}
+                {% if paper.video %} <a href={{paper.video}} target="_blank">[Video]</a> {% endif %}
+            </div>
+            <div>{{paper.author | replace: "Xiao-Ming Wu", "<span style='font-weight: bold;'>Xiao-Ming Wu</span>" }}</div>
+            <div>In: {{paper.in}}, {{paper.year}}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 
 <div>
     <h2 style="color: brown;">Award</h2>
