@@ -1,3 +1,9 @@
+- author: Dian Zheng, Xiao-Ming Wu, Zuhao Liu, Jingke Meng, Wei-Shi Zheng*.
+  title: "DiffuVolume: Diffusion Model for Volume based Stereo Matching."
+  in: arXiv
+  year: 2023
+  pdf: https://arxiv.org/abs/2308.15989
+
 - author: Xiao-Ming Wu, Dian Zheng, Zu-Hao Liu, Wei-Shi Zheng*.
   title: "Estimator Meets Equilibrium Perspective: A Rectified Straight Through Estimator for Binary Neural Networks Training."
   in: ICCV
