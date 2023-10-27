@@ -79,7 +79,7 @@ title: Xiao-Ming Wu (伍晓鸣)
                 {% if paper.video %} <a href={{paper.video}} target="_blank">[Video]</a> {% endif %}
             </div>
             <div>{{paper.author | replace: "Xiao-Ming Wu", "<span style='font-weight: bold;'>Xiao-Ming Wu</span>" }}</div>
-            <div>In: {{paper.in}}, {{paper.year}}</div>
+            <div>In: {{paper.in}}</div>
         </li>
         {% endfor %}
     </ul>
@@ -98,7 +98,7 @@ title: Xiao-Ming Wu (伍晓鸣)
                 {% if paper.video %} <a href={{paper.video}} target="_blank">[Video]</a> {% endif %}
             </div>
             <div>{{paper.author | replace: "Xiao-Ming Wu", "<span style='font-weight: bold;'>Xiao-Ming Wu</span>" }}</div>
-            <div>In: {{paper.in}}, {{paper.year}}</div>
+            <div>In: {{paper.in}}</div>
         </li>
         {% endfor %}
     </ul>
@@ -120,7 +120,7 @@ title: Xiao-Ming Wu (伍晓鸣)
     <ul>
         {% for service in site.data.service %}
         <li>
-            <div> {{service.duty}} in {{service.name}}, {{service.year}}.</div>
+            <div> {{service.duty}} in {{service.name}}, {{service.date}}.</div>
         </li>
         {% endfor %}
     </ul>
