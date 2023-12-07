@@ -1,6 +1,9 @@
+- name: Pattern Recognition (PR)
+  duty: a reviewer
+  date: 2023-12
 - name: Pattern Analysis and Machine Intelligence (TPAMI)
-  duty: Reviewer
+  duty: a reviewer
   date: 2023-8
 - name: Pattern Recognition (PR)
-  duty: Reviewer
+  duty: a reviewer
   date: 2023-10
