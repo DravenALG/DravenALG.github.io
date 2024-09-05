@@ -167,6 +167,9 @@ span.highlight {
 }
 
 @media screen and (max-width: 500px) {
+  .sign{
+    display: none;
+  }
   .paper_image{
     display: none;
   }
