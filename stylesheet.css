@@ -119,3 +119,59 @@ h3 {
 span.highlight {
   background-color: #ffffd0;
 }
+
+.scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.fixed-header a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.fixed-header a:hover {
+  color: #b0b0b0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .header_navi {
+    width: 0px;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .paper_image{
+    display: none;
+  }
+  .hoverZoomLink{
+    display: none;
+  }
+}
