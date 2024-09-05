@@ -115,6 +115,12 @@ h3 {
   font-size: 26px;
 }
 
+.chinese_name{
+  font-family: "XuandongKaishu";
+  color: #888888;
+  font-size: 26px;
+}
+
 
 span.highlight {
   background-color: #ffffd0;
@@ -136,21 +142,19 @@ span.highlight {
   background: #555;
 }
 
-
 .fixed-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: #4B4B4B;
   text-align: center;
   padding: 10px;
   z-index: 1000;
 }
 
 .fixed-header a {
-  color: white;
+  color: #F0EEEE;
   text-decoration: none;
   display: inline-block;
 }
@@ -160,9 +164,12 @@ span.highlight {
 }
 
 @media screen and (max-width: 768px) {
+  .header_name{
+    width: 100%;
+  }
   .header_navi {
-    width: 0px;
-    visibility: hidden;
+    position: absolute;
+    left: -9999px;
   }
 }
 
