@@ -75,7 +75,7 @@
                 </h2>
                 <p>
                   I'm currently a third-year master student at <a href="https://www.sysu.edu.cn" target="_blank">Sun Yat-sen University</a> (2022.06-now), advised by Prof. <a href="https://www.isee-ai.cn/~zhwshi/" target="_blank">Wei-Shi Zheng</a>, where I develop a good research ability and a nice taste of it.
-                  Previously, I obtain my B.E. degree in <a href="https://www.sdu.edu.cn/index.htm" target="_blank">Shandong University</a> (2018.09-2022.06). At that time, I had my first attempt on scientific research and cultivate the interest in it, advised by Prof. <a href="http://mima.sdu.edu.cn/Members/xinshunxu/index.htm" target="_blank">Xin-Shun Xu</a> and Associate Prof. <a href="https://faculty.sdu.edu.cn/luoxin/zh_CN/index.htm" target="_blank">Xin Luo</a>.
+                  Previously, I obtain my B.E. degree in <a href="https://www.sdu.edu.cn/index.htm" target="_blank">Shandong University</a> (2018.09-2022.06, with GPA ranking 1/354 in grade). At that time, I had my first attempt on scientific research and cultivate the interest in it, advised by Prof. <a href="http://mima.sdu.edu.cn/Members/xinshunxu/index.htm" target="_blank">Xin-Shun Xu</a> and Associate Prof. <a href="https://faculty.sdu.edu.cn/luoxin/zh_CN/index.htm" target="_blank">Xin Luo</a>.
                   I was fortunate to visit <a href="https://www.mq.edu.au" target="_blank">Macquarie university</a> (2024.06-2024.12), enjoying a happy research journey with Prof. <a href="https://researchers.mq.edu.au/en/persons/longbing-cao" target="_blank">Longbing Cao</a>.
                 </p>
 
@@ -86,7 +86,7 @@
                 </p>
 
                 <p>
-                  Now I am mainly focusing on <strong>Embodied AI</strong>, specifically on the areas of general robotic grasping and manipulation algorithms.
+                  Now I am mainly focusing on <strong>Computer Vision</strong> and <strong>Embodied AI</strong>, specifically on the areas of robotic grasping and manipulation algorithms.
                   I have also participated in various computer vision areas, such as model compression, image restoration, stereo matching, privacy detection, anomaly detection and hashing retrieval, which has significantly broadened my horizons.
                 </p>
               </td>
@@ -147,16 +147,18 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; padding-left:20px; padding-bottom: 0px; margin-bottom: -10px;"><tbody>
             <tr>
               <td style="width:80%; vertical-align:middle">
-                <h2 id="publication" style="scroll-margin-top: 45px;">Selected Publications</h2>
+                <h2 id="publication" style="scroll-margin-top: 45px;">Publications</h2>
                 <p>
-                  Below are my selected publications.
+                  Below are my publications.
                   (& means equal contribution, * refers to corresponding author.)
+                  <button id="showFullListBtn" class="toggle-button" onclick="showFullList()">[Show Full List]</button>
+                  <button id="showSelectedListBtn" class="toggle-button" onclick="showSelectedList()" style="display:none;">[Show Selected List]</button>
                 </p>
               </td>
             </tr>
            </tbody></table>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; padding-left:20px; padding-bottom: 20px;"><tbody>
+          <table id="selectedPublications" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; padding-left:20px; padding-bottom: 20px;"><tbody>
             <tr>
               <td class="paper_image" style="padding: 20px; width:25%;vertical-align:middle">
                 <img src="images/DiffuVolume.png" alt="PontTuset" width="200" style="border-style: none">
@@ -190,7 +192,7 @@
                 <br>
                 Nuo Chen&, <strong>Xiao-Ming Wu&</strong>, Guo-Hao Xu, Jian-Jian Jiang, Zibo Chen, Wei-Shi Zheng*.
                 <br>
-                <em>Robotics and Automation Letters (RA-L)</em>, 2024.
+                <em>IEEE Robotics and Automation Letters (RA-L)</em>, 2024.
                 <br>
                 <a href="https://ieeexplore.ieee.org/document/10764717" target="_blank">paper</a>
                 /
@@ -207,7 +209,7 @@
               </td>
               <td style="width:75%; vertical-align:middle">
                 <a href="https://arxiv.org/abs/2405.19291" target="_blank">
-                  <span class="papertitle">Grasp as You Say: Language-guided Dexterous Grasp Generation</span>
+                  <span class="papertitle">Grasp as You Say: Language-guided Dexterous Grasp Generation.</span>
                 </a>
                 <br>
                 Yi-Lin Wei, Jian-Jian Jiang, Chengyi Xing, Xiantuo Tan, <strong>Xiao-Ming Wu</strong>, Hao Li, Mark Cutkosky, Wei-Shi Zheng*.
@@ -227,38 +229,16 @@
 
             <tr>
               <td class="paper_image" style="padding: 20px; width:25%;vertical-align:middle">
-                <img src="images/PixelFade.png" alt="PontTuset" width="200" style="border-style: none">
-              </td>
-              <td style="width:75%; vertical-align:middle">
-                <a href="https://dl.acm.org/doi/abs/10.1145/3664647.3681262" target="_blank">
-                  <span class="papertitle">PixelFade: Privacy-preserving Person Re-identification with Noise-guided Progressive Replacement</span>
-                </a>
-                <br>
-                Delong Zhang, Yi-Xing Peng, <strong>Xiao-Ming Wu</strong>, Ancong Wu*, Wei-Shi Zheng.
-                <br>
-                <em>ACM Multimedia (MM)</em>, 2024.
-                <br>
-                <a href="https://dl.acm.org/doi/abs/10.1145/3664647.3681262" target="_blank">paper</a>
-                /
-                <a href="https://github.com/iSEE-Laboratory/PixelFade" target="_blank">code</a>
-                <p style="margin-bottom: 15px; margin-top: 5px">
-                  <strong>(Privacy Protection)</strong> Fade the pixel, protect your privacy🫣.
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="paper_image" style="padding: 20px; width:25%;vertical-align:middle">
                 <img src="images/EconomicGrasp.png" alt="PontTuset" width="200" style="border-style: none">
               </td>
               <td style="width:75%; vertical-align:middle">
                 <a href="https://link.springer.com/chapter/10.1007/978-3-031-73383-3_21" target="_blank">
-                  <span class="papertitle">An Economic Framework for 6-DoF Grasp Detection</span>
+                  <span class="papertitle">An Economic Framework for 6-DoF Grasp Detection.</span>
                 </a>
                 <br>
-                <strong>Xiao-Ming Wu&</strong>, Jia-Feng Cai&, Jian-Jian Jiang, Dian Zheng, Yi-Lin Wei, Wei-Shi Zheng*
+                <strong>Xiao-Ming Wu&</strong>, Jia-Feng Cai&, Jian-Jian Jiang, Dian Zheng, Yi-Lin Wei, Wei-Shi Zheng*.
                 <br>
-                <em>European Conference on Computer Vision (ECCV)</em>, 2024
+                <em>European Conference on Computer Vision (ECCV)</em>, 2024.
                 <br>
                 <a href="https://link.springer.com/chapter/10.1007/978-3-031-73383-3_21" target="_blank">paper</a>
                 /
@@ -275,12 +255,12 @@
               </td>
               <td style="width:75%; vertical-align:middle">
                 <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Zheng_Selective_Hourglass_Mapping_for_Universal_Image_Restoration_Based_on_Diffusion_CVPR_2024_paper.html" target="_blank">
-                  <span class="papertitle">Selective Hourglass Mapping for Universal Image Restoration Based on Diffusion Model</span>
+                  <span class="papertitle">Selective Hourglass Mapping for Universal Image Restoration Based on Diffusion Model.</span>
                 </a>
                 <br>
-                Dian Zheng, <strong>Xiao-Ming Wu</strong>, Shuzhou Yang, Jian Zhang, Jian-Fang Hu, Wei-Shi Zheng*
+                Dian Zheng, <strong>Xiao-Ming Wu</strong>, Shuzhou Yang, Jian Zhang, Jian-Fang Hu, Wei-Shi Zheng*.
                 <br>
-                <em>Computer Vision and Pattern Recognition (CVPR)</em>, 2024.
+                <em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2024.
                 <br>
                 <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Zheng_Selective_Hourglass_Mapping_for_Universal_Image_Restoration_Based_on_Diffusion_CVPR_2024_paper.html" target="_blank">paper</a>
                 /
@@ -297,12 +277,12 @@
               </td>
               <td style="width:75%; vertical-align:middle">
                 <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Xu_Dexterous_Grasp_Transformer_CVPR_2024_paper.html" target="_blank">
-                  <span class="papertitle">Dexterous Grasp Transformer</span>
+                  <span class="papertitle">Dexterous Grasp Transformer.</span>
                 </a>
                 <br>
-                Guo-Hao Xu&, Yi-Lin Wei&, Dian Zheng, <strong>Xiao-Ming Wu</strong>, Wei-Shi Zheng*
+                Guo-Hao Xu&, Yi-Lin Wei&, Dian Zheng, <strong>Xiao-Ming Wu</strong>, Wei-Shi Zheng*.
                 <br>
-                <em>Computer Vision and Pattern Recognition (CVPR)</em>, 2024.
+                <em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2024.
                 <br>
                 <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Xu_Dexterous_Grasp_Transformer_CVPR_2024_paper.html" target="_blank">paper</a>
                 /
@@ -319,12 +299,12 @@
               </td>
               <td style="width:75%; vertical-align:middle">
                 <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Wu_Estimator_Meets_Equilibrium_Perspective_A_Rectified_Straight_Through_Estimator_for_ICCV_2023_paper.html" target="_blank">
-                  <span class="papertitle">Estimator Meets Equilibrium Perspective: A Rectified Straight Through Estimator for Binary Neural Networks Training</span>
+                  <span class="papertitle">Estimator Meets Equilibrium Perspective: A Rectified Straight Through Estimator for Binary Neural Networks Training.</span>
                 </a>
                 <br>
-                <strong>Xiao-Ming Wu</strong>, Dian Zheng, Zuhao Liu, Wei-Shi Zheng*
+                <strong>Xiao-Ming Wu</strong>, Dian Zheng, Zuhao Liu, Wei-Shi Zheng*.
                 <br>
-                <em>International Conference on Computer Vision (ICCV)</em>, 2023
+                <em>IEEE International Conference on Computer Vision (ICCV)</em>, 2023.
                 <br>
                 <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Wu_Estimator_Meets_Equilibrium_Perspective_A_Rectified_Straight_Through_Estimator_for_ICCV_2023_paper.html" target="_blank">paper</a>
                 /
@@ -337,38 +317,16 @@
 
             <tr>
               <td class="paper_image" style="padding: 20px; width:25%;vertical-align:middle">
-                <img src="images/DOCH.png" alt="PontTuset" width="200" style="border-style: none">
-              </td>
-              <td style="width:75%; vertical-align:middle">
-                <a href="https://www.sciencedirect.com/science/article/pii/S0031320321004428" target="_blank">
-                  <span class="papertitle">Discrete Online Cross-modal Hashing</span>
-                </a>
-                <br>
-                Yu-Wei Zhan, Yongxin Wang, Yu Sun, <strong>Xiao-Ming Wu</strong>, Xin Luo*, Xin-Shun Xu
-                <br>
-                <em>Pattern Recognition (PR)</em>, 2022
-                <br>
-                <a href="https://www.sciencedirect.com/science/article/pii/S0031320321004428" target="_blank">paper</a>
-                /
-                <a href="https://github.com/yw-zhan/DOCH" target="_blank">code</a>
-                <p style="margin-bottom: 15px; margin-top: 5px">
-                  <strong>(Hashing Retrieval)</strong> Discrete is a good way for similarity preservation for online cross-modal hashing🫥.
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="paper_image" style="padding: 20px; width:25%;vertical-align:middle">
                 <img src="images/OASIS.png" alt="PontTuset" width="200" style="border-style: none">
               </td>
               <td style="width:75%; vertical-align:middle">
                 <a href="https://ojs.aaai.org/index.php/AAAI/article/view/20346" target="_blank">
-                  <span class="papertitle">Online Enhanced Semantic Hashing Towards Effective and Efficient Retrieval for Streaming Multi-Modal Data</span>
+                  <span class="papertitle">Online Enhanced Semantic Hashing Towards Effective and Efficient Retrieval for Streaming Multi-Modal Data.</span>
                 </a>
                 <br>
-                <strong>Xiao-Ming Wu</strong>, Xin Luo*, Yu-Wei Zhan, Chen-Lu Ding, Zhen-Duo Chen, Xin-Shun Xu
+                <strong>Xiao-Ming Wu</strong>, Xin Luo*, Yu-Wei Zhan, Chen-Lu Ding, Zhen-Duo Chen, Xin-Shun Xu.
                 <br>
-                <em>AAAI Conference on Artificial Intelligence (AAAI)</em>, 2022
+                <em>AAAI Conference on Artificial Intelligence (AAAI)</em>, 2022.
                 <br>
                 <a href="https://ojs.aaai.org/index.php/AAAI/article/view/20346" target="_blank">paper</a>
                 /
@@ -381,6 +339,209 @@
 
 
           </tbody></table>
+
+          <table id="fullPublications" style="display:none; width:100%;border:0px;border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto; padding-left:20px;"><tbody">
+            <tr>
+              <td style="padding-left: 20px; padding-bottom: 25px ; width:100%; vertical-align:middle">
+                <span class="papertitle">UGotMe: An Embodied System for Affective Human-Robot Interaction.</span>
+                <br>
+                Peizhen Li, Longbing Cao*, <strong>Xiao-Ming Wu</strong>, Xiaohan Yu, Runze Yang.
+                <br>
+                <em>IEEE International Conference on Robotics and Automation (ICRA)</em>, 2025.
+                <br>
+              </td>
+            </tr>
+            
+            <tr>
+              <td style="padding-left: 20px; padding-bottom: 25px ; width:100%; vertical-align:middle">
+                <span class="papertitle">DiffuVolume: Diffusion Model for Volume based Stereo Matching.</span>
+                <br>
+                Dian Zheng, <strong>Xiao-Ming Wu</strong>, Zuhao Liu, Jingke Meng, Wei-Shi Zheng*.
+                <br>
+                <em>International Journal of Computer Vision (IJCV)</em>, 2025.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px; padding-bottom: 25px ; width:100%; vertical-align:middle">
+                <span class="papertitle">PeriodicMFD: A Periodic-based Framework for Multi-source Fault Diagnosis.</span>
+                <br>
+                Jianbo Zheng , Chao Yang*, Tairui Zhang, Bin Jiang, Xuhui Fan, <strong>Xiao-Ming Wu</strong>, Haidong Shao*.
+                <br>
+                <em>IEEE Transactions on Transportation Electrification (TTE)</em>, 2025.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px; padding-bottom: 25px ; width:100%; vertical-align:middle">
+                <span class="papertitle">Dynamic Spectral Graph Anomaly Detection.</span>
+                <br>
+                Jianbo Zheng, Chao Yang*, Tairui Zhang, Longbing Cao*, Bin Jiang, Xuhui Fan, <strong>Xiao-Ming Wu</strong>, Xianxun Zhu.
+                <br>
+                <em>AAAI Conference on Artificial Intelligence (AAAI)</em>, 2025.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px; padding-bottom: 25px ; width:100%; vertical-align:middle">
+                <span class="papertitle">MotionGrasp: Long-Term Grasp Motion Tracking for Dynamic Grasping.</span>
+                <br>
+                Nuo Chen&, <strong>Xiao-Ming Wu&</strong>, Guo-Hao Xu, Jian-Jian Jiang, Zibo Chen, Wei-Shi Zheng*.
+                <br>
+                <em>IEEE Robotics and Automation Letters (RA-L)</em>, 2024.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px; padding-bottom: 25px ; width:100%; vertical-align:middle">
+                <span class="papertitle">Grasp as You Say: Language-guided Dexterous Grasp Generation.</span>
+                <br>
+                Yi-Lin Wei, Jian-Jian Jiang, Chengyi Xing, Xiantuo Tan, <strong>Xiao-Ming Wu</strong>, Hao Li, Mark Cutkosky, Wei-Shi Zheng*.
+                <br>
+                <em>Neural Information Processing Systems (NeurIPS) </em>, 2024.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px; padding-bottom: 25px ; width:100%; vertical-align:middle">
+                <span class="papertitle">Real-to-Sim Grasp: Rethinking the Gap between Simulation and Real World in Grasp Detection.</span>
+                <br>
+                Jia-Feng Cai, Zibo Chen, <strong>Xiao-Ming Wu</strong>, Jian-Jian Jiang, Yi-Lin Wei, Wei-Shi Zheng*.
+                <br>
+                <em>Conference on Robot Learning (CoRL)</em>, 2024.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px; padding-bottom: 25px ; width:100%; vertical-align:middle">
+                <span class="papertitle">iGrasp: An Interactive 2D-3D Framework for 6-DoF Grasp Detection.</span>
+                <br>
+                Jian-Jian Jiang, <strong>Xiao-Ming Wu</strong>, Chen Zibo, Yi-Lin Wei, Wei-Shi Zheng*.
+                <br>
+                <em>International Conference on Pattern Recognition (ICPR)</em>, 2024.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px; padding-bottom: 25px ; width:100%; vertical-align:middle">
+                <span class="papertitle">PixelFade: Privacy-preserving Person Re-identification with Noise-guided Progressive Replacement.</span>
+                <br>
+                Delong Zhang, Yi-Xing Peng, <strong>Xiao-Ming Wu</strong>, Ancong Wu*, Wei-Shi Zheng.
+                <br>
+                <em>ACM Multimedia (MM)</em>, 2024.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px; padding-bottom: 25px ; width:100%; vertical-align:middle">
+                <span class="papertitle">An Economic Framework for 6-DoF Grasp Detection.</span>
+                <br>
+                <strong>Xiao-Ming Wu&</strong>, Jia-Feng Cai&, Jian-Jian Jiang, Dian Zheng, Yi-Lin Wei, Wei-Shi Zheng*.
+                <br>
+                <em>European Conference on Computer Vision (ECCV)</em>, 2024.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px;padding-bottom: 25px ;  width:100%; vertical-align:middle">
+                <span class="papertitle">Selective Hourglass Mapping for Universal Image Restoration Based on Diffusion Model.</span>
+                <br>
+                Dian Zheng, <strong>Xiao-Ming Wu</strong>, Shuzhou Yang, Jian Zhang, Jian-Fang Hu, Wei-Shi Zheng*.
+                <br>
+                <em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2024.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px;padding-bottom: 25px ;  width:100%; vertical-align:middle">
+                <span class="papertitle">Single-View Scene Point Cloud Human Grasp Generation.</span>
+                <br>
+                Yan-Kang Wang, Chengyi Xing, Yi-Lin Wei, <strong>Xiao-Ming Wu</strong>, Wei-Shi Zheng*.
+                <br>
+                <em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2024.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px;padding-bottom: 25px ;  width:100%; vertical-align:middle">
+                <span class="papertitle">Dexterous Grasp Transformer.</span>
+                <br>
+                Guo-Hao Xu&, Yi-Lin Wei&, Dian Zheng, <strong>Xiao-Ming Wu</strong>, Wei-Shi Zheng*.
+                <br>
+                <em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2024.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px;padding-bottom: 25px ;  width:100%; vertical-align:middle">
+                <span class="papertitle">Estimator Meets Equilibrium Perspective: A Rectified Straight Through Estimator for Binary Neural Networks Training.</span>
+                <br>
+                <strong>Xiao-Ming Wu</strong>, Dian Zheng, Zuhao Liu, Wei-Shi Zheng*.
+                <br>
+                <em>IEEE International Conference on Computer Vision (ICCV)</em>, 2023.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px;padding-bottom: 25px ;  width:100%; vertical-align:middle">
+                <span class="papertitle">Generating Anomalies for Video Anomaly Detection with Prompt-based Feature Mapping.</span>
+                <br>
+                Zuhao Liu, <strong>Xiao-Ming Wu</strong>, Dian Zheng, Kun-Yu Lin, Wei-Shi Zheng*.
+                <br>
+                <em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2023.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px;padding-bottom: 25px ;  width:100%; vertical-align:middle">
+                <span class="papertitle">Weakly-Supervised Online Hashing with Refined Pseudo Tags.</span>
+                <br>
+                Chen-Lu Ding, Xin Luo*, <strong>Xiao-Ming Wu</strong>, Yu-Wei Zhan, Rui Li, Hui Zhang, and Xin-Shun Xu.
+                <br>
+                <em>Conference on Information and Knowledge Management (CIKM)</em>, 2022
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px;padding-bottom: 25px ;  width:100%; vertical-align:middle">
+                <span class="papertitle">Discrete Online Cross-Modal Hashing.</span>
+                <br>
+                Yu-Wei Zhan, Yong-Xin Wang, Yu Sun, <strong>Xiao-Ming Wu</strong>, Xin Luo*, and Xin-Shun Xu.
+                <br>
+                <em>Pattern Recognition (PR)</em>, 2022.
+                <br>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px;padding-bottom: 25px ;  width:100%; vertical-align:middle">
+                <span class="papertitle">Online Enhanced Semantic Hashing Towards Effective and Efficient Retrieval for Streaming Multi-Modal Data.</span>
+                <br>
+                <strong>Xiao-Ming Wu</strong>, Xin Luo*, Yu-Wei Zhan, Chen-Lu Ding, Zhen-Duo Chen, Xin-Shun Xu.
+                <br>
+                <em>AAAI Conference on Artificial Intelligence (AAAI)</em>, 2022.
+                <br>
+              </td>
+            </tr>
+          </tbody></table>
+
+
+
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; padding-left:20px; padding-bottom: 20px;"><tbody>
           <tr>
@@ -395,7 +556,7 @@
               </p>
               <p>
                 <div style="padding-bottom: 5px"><strong>Conference Reviewer:</strong></div>
-                <div style="padding-bottom: 5px">Computer Vision and Pattern Recognition (CVPR) 2024, 2025</div>
+                <div style="padding-bottom: 5px">IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025</div>
                 <div style="padding-bottom: 5px">ACM Multimedia (MM) 2024</div>
                 <div style="padding-bottom: 5px">International Conference on Multimedia&Expo (ICME) 2025</div>
               </p>
@@ -408,15 +569,18 @@
           <tr>
             <td style="width:100%; vertical-align:middle">
               <h2 id="award" style="scroll-margin-top: 45px;">
-                Selected Awards
+                Honours and Awards
               </h2>
               <p>
 
               <div style="padding-bottom: 5px"> First Prize, Academic Scholarship of Sun Yat-Sen University for Graduate Student (中山大学硕士研究生一等奖助金), 2022, 2023, 2024. </div>
               <div style="padding-bottom: 5px"> National Scholarship of China for Graduate Student (研究生国家奖学金), 2023. </div>
                 <div style="padding-bottom: 5px"> Honorable Bachelor Degree of Shandong University (山东大学荣誉学士学位), 2022. </div>
+                <div style="padding-bottom: 5px"> Excellent Graduate in Shandong University (山东大学优秀毕业生), 2022. </div>
+                <div style="padding-bottom: 5px"> Excellent Graduation Thesis of Shandong University (山东大学优秀毕业论文), 2022. </div>
                 <div style="padding-bottom: 5px"> National Scholarship of China for Undergraduate Student  (本科生国家奖学金), 2019, 2021. </div>
-                <div style="padding-bottom: 5px"> First Prize, Academic Scholarship of Shandong University for Undergraduate Student (山东大学本科生学业一等奖学金), 2019, 2020, 2021. </div>
+                <div style="padding-bottom: 5px"> First Prize, Academic Scholarship of Shandong University for Undergraduate Student (山东大学本科生一等奖学金), 2019, 2020, 2021. </div>
+                <div style="padding-bottom: 5px"> Three Good Student of Shandong University (山东大学三好学生), 2021 </div>
               </p>
             </td>
           </tr>
