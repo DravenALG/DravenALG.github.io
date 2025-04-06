@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load all sections
     loadSection('news-section', 'sections/news.html');
-    loadSection('publications-section', 'sections/publications.html');
     loadSection('selectedPublications', 'sections/publications_selected.html');
     loadSection('fullPublications', 'sections/publications_full.html');
     loadSection('services-section', 'sections/services.html');

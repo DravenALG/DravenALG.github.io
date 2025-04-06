@@ -125,7 +125,19 @@
               <td style="width:100%; vertical-align:middle">
                 <div id="publications-section">
                   <!-- Publications content will be loaded here -->
-                  <p>Loading publications...</p>
+                  <h2 id="publication" style="scroll-margin-top: 45px;">Publications</h2>
+                  <p>
+                    Below are my publications.
+                    (& means equal contribution, * refers to corresponding author.)
+                    <button id="showFullListBtn" class="toggle-button" onclick="showFullList()">[Show Full List]</button>
+                    <button id="showSelectedListBtn" class="toggle-button" onclick="showSelectedList()" style="display:none;">[Show Selected List]</button>
+                  </p>
+                </div>
+                <div id="selectedPublications">
+                  <p>Loading Selected Publications...</p>
+                </div>
+                <div id="fullPublications" style="display:none;">
+                  <p>Loading Full Publications...</p>
                 </div>
               </td>
             </tr>
