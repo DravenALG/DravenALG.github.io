@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const img = document.querySelector('.personal_img');
 
@@ -9,19 +8,49 @@ document.addEventListener('DOMContentLoaded', function() {
     img.addEventListener('mouseout', function() {
         img.src = 'images/myself.jpg';
     });
+
+    // Load all sections
+    loadSection('news-section', 'sections/news.html');
+    loadSection('publications-section', 'sections/publications.html');
+    loadSection('services-section', 'sections/services.html');
+    loadSection('awards-section', 'sections/awards.html');
+    
+    // Load the selected publications by default
+    loadSection('selectedPublications', 'sections/publications_selected.html');
 });
 
+// Function to load external HTML content
+function loadSection(elementId, url) {
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading section:', error);
+            document.getElementById(elementId).innerHTML = '<p>Error loading content. Please refresh the page.</p>';
+        });
+}
 
+// Publications toggle function
 function showFullList() {
     document.getElementById('selectedPublications').style.display = 'none';
-    document.getElementById('fullPublications').style.display = 'table-row-group';
+    document.getElementById('fullPublications').style.display = 'block';
     document.getElementById('showFullListBtn').style.display = 'none';
     document.getElementById('showSelectedListBtn').style.display = 'inline';
-  }
-  
-  function showSelectedList() {
-    document.getElementById('selectedPublications').style.display = 'table-row-group';
+    
+    // Load full publications only when needed
+    loadSection('fullPublications', 'sections/publications_full.html');
+}
+
+function showSelectedList() {
+    document.getElementById('selectedPublications').style.display = 'block';
     document.getElementById('fullPublications').style.display = 'none';
     document.getElementById('showFullListBtn').style.display = 'inline';
     document.getElementById('showSelectedListBtn').style.display = 'none';
-  }
+}
