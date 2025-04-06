@@ -12,11 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load all sections
     loadSection('news-section', 'sections/news.html');
     loadSection('publications-section', 'sections/publications.html');
+    loadSection('selectedPublications', 'sections/publications_selected.html');
+    loadSection('fullPublications', 'sections/publications_full.html');
     loadSection('services-section', 'sections/services.html');
     loadSection('awards-section', 'sections/awards.html');
-    
-    // Load the selected publications by default
-    loadSection('selectedPublications', 'sections/publications_selected.html');
 });
 
 // Function to load external HTML content
@@ -43,9 +42,6 @@ function showFullList() {
     document.getElementById('fullPublications').style.display = 'block';
     document.getElementById('showFullListBtn').style.display = 'none';
     document.getElementById('showSelectedListBtn').style.display = 'inline';
-    
-    // Load full publications only when needed
-    loadSection('fullPublications', 'sections/publications_full.html');
 }
 
 function showSelectedList() {
