@@ -1,14 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const img = document.querySelector('.personal_img');
-
-    img.addEventListener('mouseover', function() {
-        img.src = 'images/myself2.png';
-    });
-
-    img.addEventListener('mouseout', function() {
-        img.src = 'images/myself.jpg';
-    });
-
     // Load all sections
     loadSection('news-section', 'sections/news.html');
     loadSection('selectedPublications', 'sections/publications_selected.html');
