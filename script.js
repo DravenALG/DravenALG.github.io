@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadSection('news-section', 'sections/news.html');
     loadSection('selectedPublications', 'sections/publications_selected.html');
     loadSection('fullPublications', 'sections/publications_full.html');
+    loadSection('teaching-section', 'sections/teaching.html');
     loadSection('services-section', 'sections/services.html');
     loadSection('awards-section', 'sections/awards.html');
 });
