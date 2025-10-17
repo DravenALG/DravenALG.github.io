@@ -32,6 +32,12 @@ function showFullList() {
     document.getElementById('fullPublications').style.display = 'block';
     document.getElementById('showFullListBtn').style.display = 'none';
     document.getElementById('showSelectedListBtn').style.display = 'inline';
+
+    // Update header/title/description to Full
+    var pubTitle = document.getElementById('publication-title');
+    var pubDesc = document.getElementById('publication-desc');
+    if (pubTitle) pubTitle.textContent = 'Full Publications';
+    if (pubDesc) pubDesc.textContent = 'Below are my full publications. (& means equal contribution, * refers to corresponding author.)';
 }
 
 function showSelectedList() {
@@ -39,4 +45,10 @@ function showSelectedList() {
     document.getElementById('fullPublications').style.display = 'none';
     document.getElementById('showFullListBtn').style.display = 'inline';
     document.getElementById('showSelectedListBtn').style.display = 'none';
+
+    // Update header/title/description to Selected
+    var pubTitle = document.getElementById('publication-title');
+    var pubDesc = document.getElementById('publication-desc');
+    if (pubTitle) pubTitle.textContent = 'Selected Publications';
+    if (pubDesc) pubDesc.textContent = 'Below are my selected publications. (& means equal contribution, * refers to corresponding author.)';
 }

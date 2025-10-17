@@ -131,14 +131,17 @@
             <tr>
               <td style="width:100%; vertical-align:middle">
                 <div id="publications-section">
-                  <!-- Publications content will be loaded here -->
-                  <h2 id="publication" style="scroll-margin-top: 45px;">Publications</h2>
-                  <p>
-                    Below are my publications.
-                    (& means equal contribution, * refers to corresponding author.)
-                    <button id="showFullListBtn" class="toggle-button" onclick="showFullList()">[Show Full List]</button>
-                    <button id="showSelectedListBtn" class="toggle-button" onclick="showSelectedList()" style="display:none;">[Show Selected List]</button>
-                  </p>
+                  <!-- Publications header and buttons (script will update title/description on toggle) -->
+                  <div id="publications-header" style="scroll-margin-top: 45px;">
+                    <h2 id="publication-title">Selected Publications</h2>
+                    <p id="publication-desc">
+                      Below are my selected publications. (& means equal contribution, * refers to corresponding author.)
+                    </p>
+                    <p>
+                      <button id="showFullListBtn" class="toggle-button" onclick="showFullList()">[Show Full List]</button>
+                      <button id="showSelectedListBtn" class="toggle-button" onclick="showSelectedList()" style="display:none;">[Show Selected List]</button>
+                    </p>
+                  </div>
                 </div>
                 <div id="selectedPublications">
                   <p>Loading Selected Publications...</p>
