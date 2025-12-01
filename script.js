@@ -1,15 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Load all sections
-    loadSection('news-section', 'sections/news.html');
-    loadSection('selectedPublications', 'sections/publications_selected.html');
-    loadSection('fullPublications', 'sections/publications_full.html');
-    loadSection('teaching-section', 'sections/teaching.html');
-    loadSection('services-section', 'sections/services.html');
-    loadSection('awards-section', 'sections/awards.html');
+    const sections = [
+        { id: 'news-section', url: 'sections/news.html' },
+        { id: 'selectedPublications', url: 'sections/publications_selected.html' },
+        { id: 'fullPublications', url: 'sections/publications_full.html' },
+        { id: 'teaching-section', url: 'sections/teaching.html' },
+        { id: 'services-section', url: 'sections/services.html' },
+        { id: 'awards-section', url: 'sections/awards.html' }
+    ];
+
+    sections.forEach(section => loadSection(section.id, section.url));
 });
 
 // Function to load external HTML content
 function loadSection(elementId, url) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -18,11 +25,11 @@ function loadSection(elementId, url) {
             return response.text();
         })
         .then(data => {
-            document.getElementById(elementId).innerHTML = data;
+            element.innerHTML = data;
         })
         .catch(error => {
-            console.error('Error loading section:', error);
-            document.getElementById(elementId).innerHTML = '<p>Error loading content. Please refresh the page.</p>';
+            console.error(`Error loading section ${elementId}:`, error);
+            element.innerHTML = '<p>Error loading content.</p>';
         });
 }
 
@@ -33,11 +40,7 @@ function showFullList() {
     document.getElementById('showFullListBtn').style.display = 'none';
     document.getElementById('showSelectedListBtn').style.display = 'inline';
 
-    // Update header/title/description to Full
-    var pubTitle = document.getElementById('publication-title');
-    var pubDesc = document.getElementById('publication-desc');
-    if (pubTitle) pubTitle.textContent = 'Full Publications';
-    if (pubDesc) pubDesc.textContent = 'Below are my full publications. (& means equal contribution, * refers to corresponding author.)';
+    updatePubHeader('Full Publications', 'Below are my full publications. (& means equal contribution, * refers to corresponding author.)');
 }
 
 function showSelectedList() {
@@ -46,9 +49,12 @@ function showSelectedList() {
     document.getElementById('showFullListBtn').style.display = 'inline';
     document.getElementById('showSelectedListBtn').style.display = 'none';
 
-    // Update header/title/description to Selected
-    var pubTitle = document.getElementById('publication-title');
-    var pubDesc = document.getElementById('publication-desc');
-    if (pubTitle) pubTitle.textContent = 'Selected Publications';
-    if (pubDesc) pubDesc.textContent = 'Below are my selected publications. (& means equal contribution, * refers to corresponding author.)';
+    updatePubHeader('Selected Publications', 'Below are my selected publications. (& means equal contribution, * refers to corresponding author.)');
+}
+
+function updatePubHeader(title, desc) {
+    const pubTitle = document.getElementById('publication-title');
+    const pubDesc = document.getElementById('publication-desc');
+    if (pubTitle) pubTitle.textContent = title;
+    if (pubDesc) pubDesc.textContent = desc;
 }
