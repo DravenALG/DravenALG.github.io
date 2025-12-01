@@ -125,6 +125,10 @@ h3 {
   border-collapse: separate;
   margin-right: auto;
   margin-left: auto;
+  /* Added padding and box-sizing for mobile spacing */
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
 .section-container {
@@ -422,13 +426,31 @@ span.highlight {
     font-size: 12px;
   }
 
+  /* Force table cells to stack vertically on mobile */
+  .pub-table tr {
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
   .pub-img-cell {
+    display: block;
     width: 100%;
     padding-right: 0;
+    text-align: center; /* Center the image */
+    padding-bottom: 10px;
+  }
+
+  .pub-img-cell img {
+    max-width: 100%; /* Ensure image fits within padding */
+    width: auto;     /* Allow natural aspect ratio */
+    max-height: 200px; /* Prevent image from being too tall */
   }
 
   .pub-content-cell {
+    display: block;
     width: 100%;
+    padding-bottom: 20px;
   }
 
   footer {
