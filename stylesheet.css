@@ -533,6 +533,18 @@ span.highlight {
     font-size: 12px;
   }
 
+  strong {
+    font-size: inherit;
+  }
+
+  .fixed-header nav {
+    display: none;
+  }
+
+  .header-container {
+    justify-content: center;
+  }
+
   h2 {
     font-size: 18px;
   }
