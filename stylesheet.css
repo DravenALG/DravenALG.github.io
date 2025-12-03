@@ -144,13 +144,14 @@ strong {
 }
 
 h2 {
-  margin: 0 0 20px 0;
+  margin: 0 0 25px 0;
   font-weight: 700;
   font-family: var(--font-main);
   font-size: 22px;
   color: #111;
   position: relative;
   display: inline-block;
+  letter-spacing: -0.3px;
 }
 
 /* Decorative underline for H2 */
@@ -160,8 +161,13 @@ h2::after {
   width: 40px;
   height: 3px;
   background: var(--primary-color);
-  margin-top: 8px;
+  margin-top: 10px;
   border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+h2:hover::after {
+  width: 60px; /* Dynamic interaction */
 }
 
 h3 {
@@ -286,11 +292,9 @@ h3 {
 /* --- Profile Section --- */
 .profile-section {
   display: flex;
-  gap: 40px; /* Increased gap */
+  gap: 40px;
   align-items: center;
   margin-bottom: 40px;
-  /* Optional: subtle background for profile */
-  /* background: linear-gradient(to right, #fff, #fcfcfc); */
 }
 
 .profile-photo-wrapper {
@@ -302,9 +306,9 @@ h3 {
   max-width: 180px;
   border-radius: 50%;
   display: block;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Enhanced shadow */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 3px solid #fff; /* White border frame */
+  border: 4px solid #fff; /* Thicker border */
 }
 
 .profile-photo:hover {
@@ -360,45 +364,74 @@ footer {
 /* --- Publications & News --- */
 .papertitle {
   font-family: var(--font-main);
-  font-size: 15px;
+  font-size: 16px; /* Slightly larger */
   font-weight: 700;
-  color: #222;
+  color: #111;
 }
 
 .news-scroll {
   max-height: 160px;
   overflow-y: auto;
-  padding-right: 15px;
   margin-top: 15px;
   margin-bottom: 15px;
   border: none; /* Requirement: No border */
-  padding: 15px;
-  background-color: #f8f9fa; /* Light grey background card */
-  border-radius: 8px;
-  box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
+  padding: 10px 15px 10px 25px; /* Left padding for bullets */
+  background-color: transparent; /* Cleaner look */
+  /* Custom Scrollbar styling remains below */
+}
+
+/* Style paragraphs or list items inside news to look like a list */
+.news-scroll p, .news-scroll li {
+  position: relative;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  padding-left: 5px;
+}
+
+/* Custom bullet point */
+.news-scroll p::before, .news-scroll li::before {
+  content: '•';
+  position: absolute;
+  left: -15px;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  top: 1px;
 }
 
 .news-scroll::-webkit-scrollbar { width: 6px; }
 .news-scroll::-webkit-scrollbar-track { background: transparent; }
 .news-scroll::-webkit-scrollbar-thumb { 
-  background: #ccc; 
+  background: #ddd; 
   border-radius: 3px;
 }
-.news-scroll::-webkit-scrollbar-thumb:hover { background: #999; }
+.news-scroll::-webkit-scrollbar-thumb:hover { background: #bbb; }
 
 .pub-table {
   width: 100%;
   border: 0;
   border-spacing: 0;
-  border-collapse: separate;
+  border-collapse: collapse; /* Changed to collapse for borders */
   margin-right: auto;
 }
 
+.pub-table tr {
+  transition: background-color 0.2s ease;
+}
+
+.pub-table tr:hover {
+  background-color: #fafafa; /* Subtle hover effect */
+}
+
 .pub-img-cell {
-  padding-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   width: 25%;
   vertical-align: middle;
-  padding-right: 20px;
+  padding-right: 25px;
+  border-bottom: 1px solid #f0f0f0; /* Separator line */
 }
 
 .pub-img-cell img {
@@ -406,8 +439,8 @@ footer {
   max-width: 200px;
   height: auto;
   border-style: none;
-  border-radius: 6px; /* Slightly more rounded */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Softer shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -419,15 +452,22 @@ footer {
 .pub-content-cell {
   width: 75%;
   vertical-align: middle;
-  padding-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #f0f0f0; /* Separator line */
+}
+
+/* Remove border from the last row to look clean */
+.pub-table tr:last-child td {
+  border-bottom: none;
 }
 
 .pub-desc {
   margin-bottom: 15px;
-  margin-top: 5px;
-  font-size: 13px;
+  margin-top: 8px;
+  font-size: 14px;
   font-style: italic;
-  color: #666;
+  color: #555;
 }
 
 /* --- Components & Utilities --- */
