@@ -116,7 +116,7 @@ a:hover {
 /* Modern link underline effect for paragraph links */
 p a:not(.header-logo-link):not(.toggle-button) {
   position: relative;
-  display: inline-block;
+  display: inline;
 }
 
 p a:not(.header-logo-link):not(.toggle-button)::after {
