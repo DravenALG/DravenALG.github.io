@@ -40,7 +40,7 @@ function showFullList() {
     document.getElementById('showFullListBtn').style.display = 'none';
     document.getElementById('showSelectedListBtn').style.display = 'inline';
 
-    updatePubHeader('Full Publications', 'Below are my full publications. (& means equal contribution, * refers to corresponding author.)');
+    updatePubHeader('Below are my full publications.');
 }
 
 function showSelectedList() {
@@ -49,12 +49,10 @@ function showSelectedList() {
     document.getElementById('showFullListBtn').style.display = 'inline';
     document.getElementById('showSelectedListBtn').style.display = 'none';
 
-    updatePubHeader('Selected Publications', 'Below are my selected publications. (& means equal contribution, * refers to corresponding author.)');
+    updatePubHeader('Below are my first-author publications or maniscripts.');
 }
 
-function updatePubHeader(title, desc) {
-    const pubTitle = document.getElementById('publication-title');
+function updatePubHeader(desc) {
     const pubDesc = document.getElementById('publication-desc');
-    if (pubTitle) pubTitle.textContent = title;
     if (pubDesc) pubDesc.textContent = desc;
 }
