@@ -49,7 +49,7 @@ function showSelectedList() {
     document.getElementById('showFullListBtn').style.display = 'inline';
     document.getElementById('showSelectedListBtn').style.display = 'none';
 
-    updatePubHeader('Below are my first-author publications or maniscripts.');
+    updatePubHeader('Below are my first-author (& co-first) publications or maniscripts.');
 }
 
 function updatePubHeader(desc) {
