@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 'fullPublications', url: 'sections/publications_full.html' },
         { id: 'teaching-section', url: 'sections/teaching.html' },
         { id: 'services-section', url: 'sections/services.html' },
-        { id: 'awards-section', url: 'sections/awards.html' }
+        { id: 'awards-section', url: 'sections/awards.html' },
+        { id: 'projects-section', url: 'sections/projects.html' }
     ];
 
     sections.forEach(section => loadSection(section.id, section.url));
