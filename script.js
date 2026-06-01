@@ -27,11 +27,51 @@ function loadSection(elementId, url) {
         })
         .then(data => {
             element.innerHTML = data;
+            if (elementId === 'projects-section') {
+                loadGitHubStars(element);
+            }
         })
         .catch(error => {
             console.error(`Error loading section ${elementId}:`, error);
             element.innerHTML = '<p>Error loading content.</p>';
         });
+}
+
+// Load live GitHub star counts for project cards
+function loadGitHubStars(scope = document) {
+    const starBadges = scope.querySelectorAll('[data-github-repo]');
+
+    starBadges.forEach(badge => {
+        const repo = badge.dataset.githubRepo;
+        const countElement = badge.querySelector('.github-star-count');
+
+        if (!repo || !countElement) return;
+
+        fetch(`https://api.github.com/repos/${repo}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`GitHub API error: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                countElement.textContent = formatStarCount(data.stargazers_count);
+                badge.setAttribute('aria-label', `${data.stargazers_count} GitHub stars`);
+            })
+            .catch(error => {
+                console.error(`Error loading GitHub stars for ${repo}:`, error);
+                countElement.textContent = 'Stars';
+                badge.classList.add('github-stars-unavailable');
+            });
+    });
+}
+
+function formatStarCount(count) {
+    if (typeof count !== 'number') return 'Stars';
+    if (count < 1000) return count.toString();
+
+    const formatted = (count / 1000).toFixed(count < 10000 ? 1 : 0);
+    return `${formatted.replace(/\.0$/, '')}k`;
 }
 
 // Publications toggle function
