@@ -27,7 +27,7 @@ function loadSection(elementId, url) {
         })
         .then(data => {
             element.innerHTML = data;
-            if (elementId === 'projects-section') {
+            if (element.querySelector('[data-github-repo]')) {
                 loadGitHubStars(element);
             }
         })
@@ -37,7 +37,7 @@ function loadSection(elementId, url) {
         });
 }
 
-// Load live GitHub star counts for project cards
+// Load live GitHub star counts for badges
 function loadGitHubStars(scope = document) {
     const starBadges = scope.querySelectorAll('[data-github-repo]');
 
