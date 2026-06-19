@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    watchGitHubStars();
+    loadGitHubStars(document);
+
     // Load all sections
     const sections = [
         { id: 'news-section', url: 'sections/news.html' },
@@ -27,9 +30,7 @@ function loadSection(elementId, url) {
         })
         .then(data => {
             element.innerHTML = data;
-            if (element.querySelector('[data-github-repo]')) {
-                loadGitHubStars(element);
-            }
+            loadGitHubStars(element);
         })
         .catch(error => {
             console.error(`Error loading section ${elementId}:`, error);
@@ -46,24 +47,68 @@ function loadGitHubStars(scope = document) {
         const countElement = badge.querySelector('.github-star-count');
 
         if (!repo || !countElement) return;
+        if (badge.dataset.githubStarsLoaded === 'true' || badge.dataset.githubStarsLoading === 'true') return;
 
-        fetch(`https://api.github.com/repos/${repo}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`GitHub API error: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                countElement.textContent = formatStarCount(data.stargazers_count);
-                badge.setAttribute('aria-label', `${data.stargazers_count} GitHub stars`);
-            })
+        badge.dataset.githubStarsLoading = 'true';
+
+        fetchGitHubStarCount(repo)
+            .then(count => setGitHubStarCount(badge, countElement, count))
             .catch(error => {
                 console.error(`Error loading GitHub stars for ${repo}:`, error);
                 countElement.textContent = 'Stars';
                 badge.classList.add('github-stars-unavailable');
+            })
+            .finally(() => {
+                delete badge.dataset.githubStarsLoading;
+                badge.dataset.githubStarsLoaded = 'true';
             });
     });
+}
+
+function watchGitHubStars() {
+    const observer = new MutationObserver(mutations => {
+        if (mutations.some(mutation => mutation.addedNodes.length > 0)) {
+            loadGitHubStars(document);
+        }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+}
+
+function fetchGitHubStarCount(repo) {
+    return fetch(`https://api.github.com/repos/${repo}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`GitHub API error: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (typeof data.stargazers_count !== 'number') {
+                throw new Error('GitHub API response missing stargazers_count');
+            }
+            return data.stargazers_count;
+        })
+        .catch(apiError => fetchShieldsStarCount(repo).catch(() => {
+            throw apiError;
+        }));
+}
+
+function fetchShieldsStarCount(repo) {
+    return fetch(`https://img.shields.io/github/stars/${repo}.json`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Shields API error: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => parseStarCount(data.message));
+}
+
+function setGitHubStarCount(badge, countElement, count) {
+    countElement.textContent = formatStarCount(count);
+    badge.setAttribute('aria-label', `${count} GitHub stars`);
+    badge.classList.remove('github-stars-unavailable');
 }
 
 function formatStarCount(count) {
@@ -72,6 +117,26 @@ function formatStarCount(count) {
 
     const formatted = (count / 1000).toFixed(count < 10000 ? 1 : 0);
     return `${formatted.replace(/\.0$/, '')}k`;
+}
+
+function parseStarCount(value) {
+    if (typeof value !== 'string') {
+        throw new Error('Invalid star count');
+    }
+
+    const normalized = value.trim().toLowerCase().replace(/,/g, '');
+    const match = normalized.match(/^([\d.]+)\s*([km]?)$/);
+    if (!match) {
+        throw new Error(`Invalid star count: ${value}`);
+    }
+
+    const amount = Number(match[1]);
+    if (!Number.isFinite(amount)) {
+        throw new Error(`Invalid star count: ${value}`);
+    }
+
+    const multiplier = match[2] === 'm' ? 1000000 : match[2] === 'k' ? 1000 : 1;
+    return Math.round(amount * multiplier);
 }
 
 // Publications toggle function
