@@ -81,7 +81,7 @@ function showFullList() {
     document.getElementById('showFullListBtn').style.display = 'none';
     document.getElementById('showSelectedListBtn').style.display = 'inline';
 
-    updatePubHeader('Below are my full publications.');
+    updatePubHeader('Below are my full publications & maniscripts.');
 }
 
 function showSelectedList() {
@@ -90,7 +90,7 @@ function showSelectedList() {
     document.getElementById('showFullListBtn').style.display = 'inline';
     document.getElementById('showSelectedListBtn').style.display = 'none';
 
-    updatePubHeader('Below are my first-author (& co-first) publications or maniscripts.');
+    updatePubHeader('Below are my selected publications & maniscripts');
 }
 
 function updatePubHeader(desc) {
