@@ -155,7 +155,7 @@ function showSelectedList() {
     document.getElementById('showFullListBtn').style.display = 'inline';
     document.getElementById('showSelectedListBtn').style.display = 'none';
 
-    updatePubHeader('Below are my selected publications & maniscripts');
+    updatePubHeader('Below are my selected publications & maniscripts.');
 }
 
 function updatePubHeader(desc) {
