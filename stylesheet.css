@@ -348,10 +348,17 @@ h3 {
 
 /* --- New Classes extracted from HTML --- */
 
-.github-link {
+.github-link,
+.x-link {
   margin-left: 10px; 
   color: black; 
   font-weight: bold;
+}
+
+.x-link {
+  display: inline-block;
+  line-height: inherit;
+  vertical-align: baseline;
 }
 
 footer {
