@@ -349,10 +349,40 @@ h3 {
 /* --- New Classes extracted from HTML --- */
 
 .github-link,
-.x-link {
+.x-link,
+.linkedin-link {
   margin-left: 10px; 
-  color: black; 
   font-weight: bold;
+}
+
+.github-link,
+.github-link:hover,
+.github-link:focus {
+  color: #181717;
+}
+
+.x-link,
+.x-link:hover,
+.x-link:focus {
+  color: #000000;
+}
+
+.linkedin-link,
+.linkedin-link:hover,
+.linkedin-link:focus {
+  color: #0a66c2;
+}
+
+p .x-link::after {
+  background-color: #000000;
+}
+
+p .github-link::after {
+  background-color: #181717;
+}
+
+p .linkedin-link::after {
+  background-color: #0a66c2;
 }
 
 .x-link {
