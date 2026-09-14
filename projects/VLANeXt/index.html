@@ -1,378 +1,539 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="VLANeXt: Recipes for Building Strong VLA Models">
-  <meta name="keywords" content="VLA, Robotics, Vision-Language-Action">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VLANeXt: Recipes for Building Strong VLA Models</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <meta name="description" content="The shared project page for VLANeXt (ICML 2026) and VLANeXt Family: a systematic study of vision-language-action models, from core recipes to emerging paradigms.">
+  <meta name="keywords" content="VLANeXt, VLANeXt Family, VLA, robotics, vision-language-action, LAM, JEPA, world action models, ICML 2026">
+  <title>VLANeXt Family · From Core Recipes to Emerging Paradigms</title>
+  <link rel="canonical" href="https://dravenalg.github.io/projects/VLANeXt/">
   <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#overview">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="#top">VLANeXt <span>Family</span></a>
+      <div class="nav-links">
+        <a href="#overview">Overview</a><a href="#recipe">Core recipe</a><a href="#paradigms">Paradigms</a><a href="#results">Results</a><a href="#demos">Demos</a><a href="#BibTeX">Citation</a>
+      </div>
+      <a class="nav-paper" href="#papers">Papers ↗</a>
+    </nav>
+  </header>
 
-<!-- Full-width top banner -->
-<section class="top-banner">
-  <img src="./static/images/longhead.png" alt="VLANeXt banner" />
-</section>
+  <main id="top">
+    <section class="hero section-shell" aria-labelledby="page-title">
+      <p class="eyebrow">A systematic study of vision-language-action models</p>
+      <h1 id="page-title">VLANeXt <span>Family</span></h1>
+      <p class="subtitle">From Core Recipes to Emerging Paradigms</p>
+      <p class="hero-description">Two connected papers. One shared framework for studying and building strong VLA models.</p>
+      <div class="hero-actions">
+        <a class="pill primary" href="https://github.com/DravenALG/VLANeXt">Code <span aria-hidden="true">↗</span></a>
+        <a class="pill" href="https://huggingface.co/DravenALG/VLANeXt"><span aria-hidden="true">🤗</span> Models</a>
+        <a class="pill" href="https://github.com/DravenALG/awesome-vla-wam">Awesome VLA &amp; WAM <span aria-hidden="true">↗</span></a>
+      </div>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">VLANeXt: Recipes for Building Strong VLA Models</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              Xiao-Ming Wu, Bin Fan, Kang Liao, Jian-Jian Jiang, Runze Yang, Yihang Luo, Zhonghua Wu, Wei-Shi Zheng, Chen Change Loy*
-            </span>
+      <div class="paper-grid" id="papers">
+        <article class="paper-card" aria-labelledby="icml-title">
+          <div class="paper-meta"><span class="badge">ICML 2026</span><span>01 · Core recipe</span></div>
+          <h2 id="icml-title">VLANeXt: Recipes for Building Strong VLA Models</h2>
+          <p class="authors"><span>Xiao-Ming Wu<sup>1</sup></span>, <span>Bin Fan<sup>2</sup></span>, <span>Kang Liao<sup>1</sup></span>, <span>Jian-jian Jiang<sup>2</sup></span>, <span>Runze Yang<sup>3</sup></span>, <span>Yihang Luo<sup>1</sup></span>, <span>Zhonghua Wu<sup>4</sup></span>, <span>Wei-Shi Zheng<sup>2</sup></span>, <span>Chen Change Loy<sup>1,5,*</sup></span></p>
+          <p class="paper-description">A unified design study distilling more than 500 experiments into 12 findings and the base VLANeXt model.</p>
+          <div class="paper-links"><a href="VLANeXt-ICML.pdf">Read paper <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/abs/2602.18532">arXiv</a><a href="#cite-icml">BibTeX</a></div>
+        </article>
+        <article class="paper-card family-paper" aria-labelledby="family-title">
+          <div class="paper-meta"><span class="badge">Extended paper · 2026</span><span>02 · Emerging paradigms</span></div>
+          <h2 id="family-title">VLANeXt Family: A Systematic Study of VLA Models from Core Recipes to Emerging Paradigms</h2>
+          <p class="authors"><span>Xiao-Ming Wu<sup>1</sup></span>, <span>Kang Liao<sup>1</sup></span>, <span>Yihang Luo<sup>1</sup></span>, <span>Bin Fan<sup>2</sup></span>, <span>Jian-jian Jiang<sup>2</sup></span>, <span>Runze Yang<sup>3</sup></span>, <span>Zhonghua Wu<sup>4</sup></span>, <span>Wei-Shi Zheng<sup>2</sup></span>, <span>Chen Change Loy<sup>1,5,*</sup></span></p>
+          <p class="paper-description">Five new variants test the core recipe across model scales, latent actions, predictive representations, and world action models.</p>
+          <!-- The README's Family arXiv identifier is a placeholder. Link to the supplied PDF until a real identifier is assigned. -->
+          <div class="paper-links"><a href="VLANeXt-Family.pdf">Read paper <span aria-hidden="true">↗</span></a><a href="#cite-family">BibTeX</a></div>
+        </article>
+      </div>
+      <p class="affiliations"><span><sup>1</sup> S-Lab, Nanyang Technological University</span><span><sup>2</sup> Sun Yat-sen University</span><span><sup>3</sup> Shanghai Jiao Tong University</span><span><sup>4</sup> SenseTime Research</span><span><sup>5</sup> ACE Robotics</span></p>
+      <p class="correspondence">* Corresponding author: Chen Change Loy</p>
+    </section>
+
+    <div class="banner section-shell">
+      <img src="./static/images/longhead.png" width="2558" height="697" alt="Franka robot arm with a diverse collection of objects for real-world manipulation">
+    </div>
+
+    <section class="section-shell section" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">One research trajectory</p><h2 id="overview-title">A strong recipe.<br>A broader family.</h2></div>
+        <p>Which VLA design choices matter, and do they remain effective as the field evolves? We study both questions under a unified training and evaluation framework, from a simple RT-2-style baseline to six VLANeXt variants.</p>
+      </div>
+      <div class="metrics-grid">
+        <div><strong>500+</strong><span>Core design experiments</span></div>
+        <div><strong>12</strong><span>Findings behind the core recipe</span></div>
+        <div><strong>98.4%</strong><span>VLANeXt-L · LIBERO average</span></div>
+        <div><strong>83.9%</strong><span>Base · LIBERO-plus average</span></div>
+      </div>
+      <div class="roadmap-layout">
+        <figure class="paper-figure roadmap-figure">
+          <a href="./static/images/roadmap.png" aria-label="Open the full-resolution VLANeXt roadmap"><img src="./static/images/roadmap.png" width="1306" height="2221" loading="lazy" alt="Ablation trajectory from the RT-2-style baseline to VLANeXt and the S, Base, L, LAM, JEPA, and WAM variants"></a>
+          <figcaption>The core study uses the Spatial suite, moving from LIBERO to LIBERO-plus as performance saturates. The Family results at the bottom are averages across all four LIBERO suites.</figcaption>
+        </figure>
+        <div class="roadmap-story">
+          <article><p class="step-number">01 · Establish the recipe</p><h3>Make each design choice count</h3><p>The ICML study examines foundational components, perception essentials, and action modeling perspectives. Their combination yields the original VLANeXt, now the Base model of the family.</p><a class="text-link" href="#recipe">Explore the core recipe <span aria-hidden="true">↓</span></a></article>
+          <article><p class="step-number">02 · Test its generality</p><h3>Change the scale and the prior</h3><p>The extended study introduces compact and larger models, latent-action pretraining, semantic future prediction, and joint video-action learning. Controlled ablations examine whether the same recipe remains useful in each setting.</p><a class="text-link" href="#paradigms">Meet the family <span aria-hidden="true">↓</span></a></article>
+          <article><p class="step-number">03 · Build on shared foundations</p><h3>One codebase, six variants</h3><p>Both papers share a model implementation, training entry point, and evaluation pipeline. Configuration files select the backbone and learning objectives.</p><a class="text-link" href="https://github.com/DravenALG/VLANeXt#models-and-configurations">Models and configurations <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="recipe" aria-labelledby="recipe-title">
+      <div class="section-shell">
+        <div class="section-heading">
+          <div><p class="section-kicker">VLANeXt · ICML 2026</p><h2 id="recipe-title">The core architecture</h2></div>
+          <p>Multi-view images, language instructions, and proprioception enter a multimodal backbone. Learnable meta queries softly connect it to a dedicated policy module, which predicts action chunks with flow matching and frequency-domain regularization.</p>
+        </div>
+        <figure class="paper-figure">
+          <a href="./static/images/framework.png" aria-label="Open the full-resolution core architecture"><img src="./static/images/framework.png" width="3166" height="1972" loading="lazy" alt="VLANeXt core architecture: multi-view vision, language and proprioception feed the MLLM; soft meta queries condition a diffusion policy with a frequency-domain action loss"></a>
+          <figcaption>The base VLANeXt architecture. A Qwen3-VL-2B backbone and a dedicated policy module combine the effective design choices identified in the core study.</figcaption>
+        </figure>
+        <div class="recipe-grid">
+          <article><span class="step-number">01 · Foundation</span><h3>A dedicated action pathway</h3><p>A deeper policy module, action chunking, a strong VLM, and soft layer-wise connections provide the foundation. Flow matching models continuous action distributions.</p></article>
+          <article><span class="step-number">02 · Perception</span><h3>The right inputs, in the right place</h3><p>Third-person and wrist views improve robustness. Proprioception is most effective when conditioned in the VLM; simply adding past images does not improve this setup.</p></article>
+          <article><span class="step-number">03 · Action modeling</span><h3>Learn the structure of motion</h3><p>A frequency-domain loss regularizes action trajectories with little overhead. Auxiliary future-image prediction helps, but is left out of Base because it nearly triples training cost.</p></article>
+        </div>
+        <details class="study-details" id="core-ablation">
+          <summary><span><span class="table-label">Table I · Core design study</span><strong>Full recipe exploration results</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary>
+          <div class="details-body"><p class="table-description">Success rates (%) on the Spatial suite. Each block varies one design aspect along the exploration trajectory. These are Spatial results, distinct from the four-suite benchmark averages below.</p>
+          <div class="table-scroll" role="region" aria-label="Core-recipe ablations · Spatial suite success rate (%) · Family Table I" tabindex="0">
+            <table id="recipe-table" class="data-table wide-table">
+              <caption class="sr-only">Core-recipe ablations · Spatial suite success rate (%) · Family Table I</caption>
+              <thead><tr><th rowspan="2" scope="col">Design / variant</th><th scope="colgroup">LIBERO</th><th colspan="8" scope="colgroup">LIBERO-plus · unseen perturbations</th></tr><tr><th scope="col">Original</th><th scope="col">Camera</th><th scope="col">Robot</th><th scope="col">Language</th><th scope="col">Light</th><th scope="col">Background</th><th scope="col">Noise</th><th scope="col">Layout</th><th scope="col">Total ↑</th></tr></thead>
+              <tbody>
+              <tr class="group-row"><th colspan="10" scope="colgroup">Foundational components · RT-2-style baseline</th></tr>
+              <tr><th scope="row">Baseline</th><td>19.8</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>&lt; 5.0</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">Policy module design</th></tr>
+              <tr><th scope="row">Baseline</th><td>19.8</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>&lt; 5.0</td></tr>
+              <tr><th scope="row">Separate Head</th><td>30.2</td><td>0.8</td><td>10.0</td><td>31.0</td><td>15.4</td><td>24.8</td><td>4.0</td><td>30.1</td><td>16.6</td></tr>
+              <tr><th scope="row">Large Policy Module</th><td>64.4</td><td>0.5</td><td>12.6</td><td>79.7</td><td>34.6</td><td>32.9</td><td>8.5</td><td>63.1</td><td>34.0</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">Action chunking horizon</th></tr>
+              <tr><th scope="row">Action Chunk 1</th><td>64.4</td><td>0.5</td><td>12.6</td><td>79.7</td><td>34.6</td><td>32.9</td><td>8.5</td><td>63.1</td><td>34.0</td></tr>
+              <tr><th scope="row">Action Chunk 4</th><td>75.4</td><td>5.3</td><td>28.0</td><td>67.9</td><td>42.5</td><td>50.4</td><td>14.8</td><td>70.4</td><td>40.0</td></tr>
+              <tr><th scope="row">Action Chunk 8</th><td>74.6</td><td>5.6</td><td>26.0</td><td>85.6</td><td>56.8</td><td>55.8</td><td>11.7</td><td>63.9</td><td>43.4</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">Action learning objective</th></tr>
+              <tr><th scope="row">bin Classification</th><td>74.6</td><td>5.6</td><td>26.0</td><td>85.6</td><td>56.8</td><td>55.8</td><td>11.7</td><td>63.9</td><td>43.4</td></tr>
+              <tr><th scope="row">VQ-VAE Classification</th><td>58.8</td><td>3.2</td><td>44.3</td><td>67.2</td><td>42.5</td><td>43.8</td><td>7.1</td><td>48.3</td><td>36.5</td></tr>
+              <tr><th scope="row">Regression</th><td>85.4</td><td>5.1</td><td>32.3</td><td>90.5</td><td>62.7</td><td>68.6</td><td>7.7</td><td>75.6</td><td>48.4</td></tr>
+              <tr><th scope="row">DDIM</th><td>80.0</td><td>4.8</td><td>52.6</td><td>80.3</td><td>70.5</td><td>55.4</td><td>9.4</td><td>68.3</td><td>48.3</td></tr>
+              <tr><th scope="row">Flow Matching</th><td>80.0</td><td>7.2</td><td>34.6</td><td>79.2</td><td>46.9</td><td>57.8</td><td>11.1</td><td>77.4</td><td>45.0</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">VLM backbone capacity</th></tr>
+              <tr><th scope="row">Paligemma</th><td>69.8</td><td>1.1</td><td>17.1</td><td>32.1</td><td>22.9</td><td>32.6</td><td>2.8</td><td>24.9</td><td>18.9</td></tr>
+              <tr><th scope="row">LLaMA3.2 + SigLip</th><td>80.0</td><td>7.2</td><td>34.6</td><td>79.2</td><td>46.9</td><td>57.8</td><td>11.1</td><td>77.4</td><td>45.0</td></tr>
+              <tr><th scope="row">Qwen3VL-2B</th><td>90.0</td><td>9.6</td><td>42.0</td><td>74.6</td><td>75.0</td><td>68.6</td><td>27.9</td><td>83.6</td><td>53.7</td></tr>
+              <tr><th scope="row">Qwen3VL-4B</th><td>95.8</td><td>12.2</td><td>66.0</td><td>93.3</td><td>89.0</td><td>81.0</td><td>29.9</td><td>88.6</td><td>64.8</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">VLM-policy connection</th></tr>
+              <tr><th scope="row">Loose Connection</th><td>90.0</td><td>9.6</td><td>42.0</td><td>74.6</td><td>75.0</td><td>68.6</td><td>27.9</td><td>83.6</td><td>53.7</td></tr>
+              <tr><th scope="row">Tight Connection</th><td>90.0</td><td>14.4</td><td>51.7</td><td>81.0</td><td>68.5</td><td>67.8</td><td>25.1</td><td>82.1</td><td>55.4</td></tr>
+              <tr><th scope="row">Soft Connection</th><td>91.8</td><td>11.8</td><td>58.3</td><td>89.2</td><td>72.9</td><td>74.4</td><td>19.9</td><td>72.5</td><td>56.2</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">Perception essentials · temporal observation history</th></tr>
+              <tr><th scope="row">Current Frame Image</th><td>91.8</td><td>11.8</td><td>58.3</td><td>89.2</td><td>72.9</td><td>74.4</td><td>19.9</td><td>72.5</td><td>56.2</td></tr>
+              <tr><th scope="row">Temporal Observation History</th><td>85.0</td><td>7.2</td><td>68.6</td><td>51.5</td><td>65.8</td><td>62.0</td><td>20.8</td><td>80.8</td><td>50.2</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">Camera views</th></tr>
+              <tr><th scope="row">Third-person camera view</th><td>91.8</td><td>11.8</td><td>58.3</td><td>89.2</td><td>72.9</td><td>74.4</td><td>19.9</td><td>72.5</td><td>56.2</td></tr>
+              <tr><th scope="row">Multiview (third-person + wrist)</th><td>97.6</td><td>64.9</td><td>54.0</td><td>91.8</td><td>97.7</td><td>93.0</td><td>85.5</td><td>90.1</td><td>80.5</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">Proprioception conditioning</th></tr>
+              <tr><th scope="row">No Proprioception Input</th><td>97.6</td><td>64.9</td><td>54.0</td><td>91.8</td><td>97.7</td><td>93.0</td><td>85.5</td><td>90.1</td><td>80.5</td></tr>
+              <tr><th scope="row">Proprioception to VLM</th><td>98.0</td><td>87.2</td><td>62.2</td><td>86.2</td><td>98.3</td><td>93.8</td><td>92.0</td><td>96.6</td><td>87.7</td></tr>
+              <tr><th scope="row">Proprioception to Policy</th><td>96.2</td><td>62.8</td><td>69.1</td><td>92.3</td><td>92.5</td><td>96.5</td><td>87.2</td><td>88.3</td><td>83.4</td></tr>
+              <tr><th scope="row">Proprioception to VLM &amp; Policy</th><td>97.6</td><td>77.9</td><td>73.4</td><td>82.3</td><td>90.1</td><td>94.6</td><td>90.6</td><td>88.8</td><td>84.8</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">Proprioception projector</th></tr>
+              <tr><th scope="row">Linear Projector</th><td>98.0</td><td>87.2</td><td>62.2</td><td>86.2</td><td>98.3</td><td>93.8</td><td>92.0</td><td>96.6</td><td>87.7</td></tr>
+              <tr><th scope="row">Transformer Projector</th><td>96.4</td><td>96.8</td><td>58.0</td><td>84.6</td><td>95.2</td><td>98.8</td><td>96.9</td><td>93.3</td><td>88.8</td></tr>
+              <tr><th scope="row">Transformer Projector &amp; MAE</th><td>97.0</td><td>91.1</td><td>51.1</td><td>89.9</td><td>72.8</td><td>86.9</td><td>78.7</td><td>85.6</td><td>78.9</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">Action modeling · world modeling perspective</th></tr>
+              <tr><th scope="row">Normal</th><td>98.0</td><td>87.2</td><td>62.2</td><td>86.2</td><td>98.3</td><td>93.8</td><td>92.0</td><td>96.6</td><td>87.7</td></tr>
+              <tr><th scope="row">World Modelling</th><td>98.0</td><td>94.4</td><td>80.3</td><td>76.9</td><td>99.7</td><td>98.8</td><td>93.2</td><td>93.2</td><td>90.3</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">Time-series forecasting perspective</th></tr>
+              <tr><th scope="row">Normal</th><td>98.0</td><td>87.2</td><td>62.2</td><td>86.2</td><td>98.3</td><td>93.8</td><td>92.0</td><td>96.6</td><td>87.7</td></tr>
+              <tr class="ours"><th scope="row">Frequency Domain Loss</th><td>99.0</td><td>95.7</td><td>78.6</td><td>86.9</td><td>99.7</td><td>98.8</td><td>98.0</td><td>96.6</td><td>93.1</td></tr>
+              </tbody>
+            </table>
           </div>
-
-          <div class="is-size-5 publication-authors" style="font-family: 'Google Sans', sans-serif;">
-            <span class="author-block">S-Lab, Nanyang Technological University;</span>
-            <span class="author-block">Sun Yat-sen University;</span>
-            <span class="author-block">ACE Robotics</span>
+            <p class="table-note">“—” or “-” denotes an unreported result. Precise values follow Table I of the extended paper; the supplied roadmap is a visual summary and contains some differing values.</p>
           </div>
+        </details>
+      </div>
+    </section>
 
-          <div class="publication-acceptance">
-            <span class="acceptance-badge">
-              🚀 We update our codebase with plenty of new features, check it out! 🚀
-            </span>
+    <section class="section section-shell" id="paradigms" aria-labelledby="paradigms-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">VLANeXt Family · Extended study</p><h2 id="paradigms-title">Four directions.<br>A common foundation.</h2></div>
+        <p>The Family study asks whether the core recipe transfers to different model capacities and sources of prior knowledge: visual transitions, semantic representations, and video dynamics.</p>
+      </div>
+      <figure class="paper-figure paradigms-figure">
+        <a href="./static/images/paradigms.png" aria-label="Open the full-resolution emerging-paradigm architectures"><img src="./static/images/paradigms.png" width="1385" height="1133" loading="lazy" alt="Four extensions of VLANeXt: backbone scaling, latent-action pretraining, JEPA-style prediction in DINO space, and joint future-video and action modeling"></a>
+        <figcaption>From the core architecture to the Family: (a) model scaling, (b) latent-action pretraining, (c) latent predictive representation learning, and (d) world action modeling.</figcaption>
+      </figure>
+      <div class="paradigm-grid">
+        <article><span class="step-number">A · Model capacity</span><h3>VLANeXt-S / Base / L</h3><p>Apply the recipe to Qwen3.5-0.8B, Qwen3-VL-2B, and Qwen3-VL-4B backbones. The remaining architecture and training recipe are shared.</p></article>
+        <article><span class="step-number">B · Action-like priors</span><h3>VLANeXt-LAM</h3><p>Learn latent actions from current and future frames with a VQ-VAE. Pretrain on those visual transitions, then fine-tune on labeled robot actions.</p></article>
+        <article><span class="step-number">C · Semantic priors</span><h3>VLANeXt-JEPA</h3><p>Predict future DINOv3 features alongside actions. The best evaluated variant predicts the observation at the end of the current action horizon.</p></article>
+        <article><span class="step-number">D · World-dynamics priors</span><h3>VLANeXt-WAM</h3><p>Replace the VLM with a pretrained Wan video-generation backbone and jointly learn video and actions. The fast connection transfers predictive priors without direct action attention to future video tokens.</p></article>
+      </div>
+      <div class="table-heading"><div><p class="table-label">Models and configurations</p><h3>Meet the VLANeXt family</h3></div><p>Success rates (%) averaged over Spatial, Object, Goal, and Long. Backbone names follow the released configurations.</p></div>
+          <div class="table-scroll" role="region" aria-label="VLANeXt family · released configurations and LIBERO average success rates" tabindex="0">
+            <table id="family-table" class="data-table family-table">
+              <caption class="sr-only">VLANeXt family · released configurations and LIBERO average success rates</caption>
+              <thead><tr><th scope="col">Model</th><th scope="col">Backbone</th><th scope="col">Focus</th><th scope="col">LIBERO avg. ↑</th><th scope="col">Configuration</th></tr></thead>
+              <tbody>
+              <tr><th scope="row">VLANeXt-S</th><td>Qwen3.5-0.8B</td><td>Compact VLA</td><td>96.7</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-S_config.yaml" aria-label="VLANeXt-S training configuration">YAML ↗</a></td></tr>
+              <tr class="ours"><th scope="row">VLANeXt (Base / B)</th><td>Qwen3-VL-2B</td><td>Core recipe · ICML 2026</td><td>97.4</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-B_config.yaml" aria-label="VLANeXt-B training configuration">YAML ↗</a></td></tr>
+              <tr><th scope="row">VLANeXt-L</th><td>Qwen3-VL-4B</td><td>Larger VLA</td><td class="best">98.4</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-L_config.yaml" aria-label="VLANeXt-L training configuration">YAML ↗</a></td></tr>
+              <tr><th scope="row">VLANeXt-LAM</th><td>Qwen3-VL-2B</td><td>VQ-VAE latent-action pretraining</td><td>97.6</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-LAM_config.yaml" aria-label="VLANeXt-LAM training configuration">YAML ↗</a></td></tr>
+              <tr><th scope="row">VLANeXt-JEPA</th><td>Qwen3-VL-2B</td><td>Future DINOv3 feature prediction</td><td>97.7</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-JEPA_config.yaml" aria-label="VLANeXt-JEPA training configuration">YAML ↗</a></td></tr>
+              <tr><th scope="row">VLANeXt-WAM</th><td>Wan2.2-TI2V-5B</td><td>Joint video and action learning</td><td>98.2</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-WAM_config.yaml" aria-label="VLANeXt-WAM training configuration">YAML ↗</a></td></tr>
+              </tbody>
+            </table>
           </div>
+      <p class="table-note">VLANeXt (Base / B) is the original ICML model. The five additional variants are introduced in the extended paper. Backbone sizes are not total model parameter counts.</p>
+    </section>
 
-          <div class="publication-acceptance">
-            <span class="acceptance-badge">
-              🎉 Accepted to <strong>ICML 2026</strong> 🎉
-            </span>
+    <section class="section soft-section" id="results" aria-labelledby="results-title">
+      <div class="section-shell">
+        <div class="section-heading">
+          <div><p class="section-kicker">Controlled evaluation</p><h2 id="results-title">Does the recipe<br>carry over?</h2></div>
+          <p>Removing core ingredients reduces performance in every reported Family ablation. The largest observed drop is 11.8 percentage points when removing multi-view inputs from VLANeXt-LAM.</p>
+        </div>
+        <div class="table-heading"><div><p class="table-label">Table V · Emerging paradigms</p><h3>The core recipe across the family</h3></div><p>LIBERO four-suite average success rate (%). Parentheses show the change in percentage points relative to each variant’s full recipe.</p></div>
+          <div class="table-scroll" role="region" aria-label="Core-recipe ablations across emerging paradigms · Family Table V" tabindex="0">
+            <table id="paradigm-table" class="data-table wide-table">
+              <caption class="sr-only">Core-recipe ablations across emerging paradigms · Family Table V</caption>
+              <thead><tr><th scope="col">Model</th><th scope="col">Backbone</th><th scope="col">Full recipe ↑</th><th scope="col">w/o Chunking</th><th scope="col">w/o Multi-view</th><th scope="col">w/o Flow</th><th scope="col">w/o Prop.</th><th scope="col">w/o Freq.</th></tr></thead>
+              <tbody>
+              <tr><th scope="row">VLANeXt-S</th><td>Qwen3.5-0.8B</td><td class="best">96.7</td><td>88.7 <span class="delta">(-8.0)</span></td><td>89.9 <span class="delta">(-6.8)</span></td><td>94.0 <span class="delta">(-2.7)</span></td><td>95.8 <span class="delta">(-0.9)</span></td><td>96.6 <span class="delta">(-0.1)</span></td></tr>
+              <tr><th scope="row">VLANeXt-L</th><td>Qwen3-VL-4B</td><td class="best">98.4</td><td>93.2 <span class="delta">(-5.2)</span></td><td>94.6 <span class="delta">(-3.8)</span></td><td>96.6 <span class="delta">(-1.8)</span></td><td>96.8 <span class="delta">(-1.6)</span></td><td>97.1 <span class="delta">(-1.3)</span></td></tr>
+              <tr><th scope="row">VLANeXt-LAM</th><td>Qwen3-VL-2B</td><td class="best">97.6</td><td>87.8 <span class="delta">(-9.8)</span></td><td>85.8 <span class="delta">(-11.8)</span></td><td>93.2 <span class="delta">(-4.4)</span></td><td>94.6 <span class="delta">(-3.0)</span></td><td>95.3 <span class="delta">(-2.3)</span></td></tr>
+              <tr><th scope="row">VLANeXt-JEPA</th><td>Qwen3-VL-2B</td><td class="best">97.7</td><td><span aria-label="Not reported">—</span></td><td>93.3 <span class="delta">(-4.4)</span></td><td><span aria-label="Not reported">—</span></td><td><span aria-label="Not reported">—</span></td><td>95.5 <span class="delta">(-2.2)</span></td></tr>
+              <tr><th scope="row">VLANeXt-WAM</th><td>WAN2.2-5B</td><td class="best">98.2</td><td>94.1 <span class="delta">(-4.1)</span></td><td>89.9 <span class="delta">(-8.3)</span></td><td>96.0 <span class="delta">(-2.2)</span></td><td>97.6 <span class="delta">(-0.6)</span></td><td>98.0 <span class="delta">(-0.2)</span></td></tr>
+              </tbody>
+            </table>
           </div>
+        <p class="table-note"><span class="legend-best">Full recipe</span> Chunking: action chunking · Flow: flow matching · Prop.: proprioception · Freq.: frequency-domain loss. “—” means not reported in the paper.</p>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- arXiv Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2602.18532" class="external-link button is-normal is-rounded is-danger">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/DravenALG/VLANeXt" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>VLANeXt Code</span>
-                  </a>
-              </span>
-              <!-- Hugging Face Link. -->
-              <span class="link-block">
-                <a href="https://huggingface.co/DravenALG/VLANeXt" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <p style="font-size:18px">🤗</p>
-                  </span>
-                  <span>Hugging Face</span>
-                </a>
-              </span>
-              <!-- Awesome VLA Link. -->
-              <span class="link-block">
-                <a href="https://github.com/DravenALG/awesome-vla-wam" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Awesome VLA & WAM</span>
-                  </a>
-              </span>
+        <div class="study-list">
+          <details class="study-details">
+            <summary><span><span class="table-label">Table VI · Latent-action pretraining</span><strong>The latent-action constraint matters</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary>
+            <div class="details-body"><p class="table-description">VQ-VAE reaches 97.6%, while training the action-only baseline for the same total number of steps reaches 97.0%. Longer training alone does not explain the improvement.</p>
+          <div class="table-scroll" role="region" aria-label="Latent-action pretraining · Family Table VI" tabindex="0">
+            <table id="lam-table" class="data-table wide-table">
+              <caption class="sr-only">Latent-action pretraining · Family Table VI</caption>
+              <thead><tr><th scope="col">Model</th><th scope="col">LAM constraint</th><th scope="col">Pretrain steps</th><th scope="col">Fine-tune steps</th><th scope="col">Spatial</th><th scope="col">Object</th><th scope="col">Goal</th><th scope="col">Long</th><th scope="col">Average ↑</th></tr></thead>
+              <tbody>
+              <tr><th scope="row">VLANeXt</th><td>—</td><td>—</td><td>10k</td><td class="best">99.0</td><td>99.2</td><td>96.6</td><td>94.8</td><td>97.4</td></tr>
+              <tr><th scope="row">VLANeXt · matched duration</th><td>—</td><td>—</td><td>30k</td><td>98.8</td><td>98.8</td><td>96.2</td><td>94.0</td><td>97.0</td></tr>
+              <tr><th scope="row">VLANeXt-LAM</th><td>VICReg</td><td>20k</td><td>10k</td><td>95.4</td><td>99.6</td><td class="best">97.0</td><td>95.4</td><td>96.9</td></tr>
+              <tr><th scope="row">VLANeXt-LAM</th><td>VAE</td><td>20k</td><td>10k</td><td>98.0</td><td>97.8</td><td>95.2</td><td>96.2</td><td>96.8</td></tr>
+              <tr class="ours"><th scope="row">VLANeXt-LAM</th><td>VQ-VAE</td><td>20k</td><td>10k</td><td>98.0</td><td class="best">99.8</td><td>95.6</td><td class="best">97.0</td><td class="best">97.6</td></tr>
+              </tbody>
+            </table>
+          </div>
             </div>
+          </details>
+          <details class="study-details">
+            <summary><span><span class="table-label">Table VII · Predictive representations</span><strong>Align semantic prediction with the action horizon</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary>
+            <div class="details-body"><p class="table-description">Predicting DINOv3 features at the end of the current action horizon reaches 97.7%, compared with 96.6% for the episode-final target and 96.4% for the Emu3.5-token objective.</p>
+          <div class="table-scroll" role="region" aria-label="Latent predictive objectives · Family Table VII" tabindex="0">
+            <table id="jepa-table" class="data-table wide-table">
+              <caption class="sr-only">Latent predictive objectives · Family Table VII</caption>
+              <thead><tr><th scope="col">Model</th><th scope="col">Generator</th><th scope="col">Objective</th><th scope="col">Spatial</th><th scope="col">Object</th><th scope="col">Goal</th><th scope="col">Long</th><th scope="col">Average ↑</th></tr></thead>
+              <tbody>
+              <tr><th scope="row">VLANeXt</th><td>—</td><td>Action only</td><td class="best">99.0</td><td>99.2</td><td>96.6</td><td>94.8</td><td>97.4</td></tr>
+              <tr><th scope="row">VLANeXt</th><td>Emu3.5 tokenizer + DiT</td><td>Action + horizon-final image</td><td>97.6</td><td class="best">99.8</td><td>95.4</td><td>92.8</td><td>96.4</td></tr>
+              <tr><th scope="row">VLANeXt-JEPA</th><td>DINO encoder + DiT</td><td>Action + episode-final image</td><td>98.0</td><td>99.2</td><td>96.4</td><td>93.0</td><td>96.6</td></tr>
+              <tr class="ours"><th scope="row">VLANeXt-JEPA</th><td>DINO encoder + DiT</td><td>Action + horizon-final image</td><td>98.0</td><td class="best">99.8</td><td class="best">97.0</td><td class="best">95.8</td><td class="best">97.7</td></tr>
+              </tbody>
+            </table>
           </div>
-
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-full-width">
-              <div class="content has-text-justified">
-                <video id="roadmap-video" src="./static/videos/roadmap_page.mp4" poster="./static/images/roadmap_page.png" width="100%" autoplay loop muted playsinline style="border-radius: 5px; border: none; box-shadow: none; display: block; clip-path: inset(0 0 5px 0);"></video>
-              </div>
             </div>
+          </details>
+          <details class="study-details">
+            <summary><span><span class="table-label">Table VIII · World action modeling</span><strong>Joint video and action learning improves control</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary>
+            <div class="details-body"><p class="table-description">On the same Wan backbone, the action-only baseline reaches 95.6%. Joint video and action learning improves this to 98.2% with the fast connection and 97.6% with the joint connection.</p>
+          <div class="table-scroll" role="region" aria-label="World action modeling variants · Family Table VIII" tabindex="0">
+            <table id="wam-table" class="data-table wide-table">
+              <caption class="sr-only">World action modeling variants · Family Table VIII</caption>
+              <thead><tr><th scope="col">Model</th><th scope="col">Backbone</th><th scope="col">Objective</th><th scope="col">Connection</th><th scope="col">Spatial</th><th scope="col">Object</th><th scope="col">Goal</th><th scope="col">Long</th><th scope="col">Average ↑</th></tr></thead>
+              <tbody>
+              <tr><th scope="row">VLANeXt</th><td>Qwen3-VL-2B</td><td>Action only</td><td>—</td><td class="best">99.0</td><td>99.2</td><td>96.6</td><td>94.8</td><td>97.4</td></tr>
+              <tr><th scope="row">VLANeXt-WAM</th><td>WAN2.2-5B</td><td>Action only</td><td>—</td><td>95.0</td><td>99.6</td><td>96.4</td><td>91.2</td><td>95.6</td></tr>
+              <tr class="ours"><th scope="row">VLANeXt-WAM</th><td>WAN2.2-5B</td><td>Action &amp; video</td><td>Fast</td><td>97.8</td><td>99.4</td><td class="best">99.6</td><td>96.0</td><td class="best">98.2</td></tr>
+              <tr><th scope="row">VLANeXt-WAM</th><td>WAN2.2-5B</td><td>Action &amp; video</td><td>Joint</td><td>95.2</td><td class="best">99.8</td><td>97.0</td><td class="best">98.2</td><td>97.6</td></tr>
+              </tbody>
+            </table>
           </div>
+            </div>
+          </details>
+          <details class="study-details">
+            <summary><span><span class="table-label">Table IX · Model scaling</span><strong>Capacity helps, with diminishing returns</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary>
+            <div class="details-body"><p class="table-description">The recipe works across both Qwen families, but gains are not monotonic: Qwen3.5-2B and Qwen3-VL-4B outperform their larger counterparts in these LIBERO experiments.</p>
+          <div class="table-scroll" role="region" aria-label="Backbone scaling · Family Table IX" tabindex="0">
+            <table id="scaling-table" class="data-table ">
+              <caption class="sr-only">Backbone scaling · Family Table IX</caption>
+              <thead><tr><th scope="col">Backbone</th><th scope="col">Spatial</th><th scope="col">Object</th><th scope="col">Goal</th><th scope="col">Long</th><th scope="col">Average ↑</th></tr></thead>
+              <tbody>
+              <tr><th scope="row">Qwen3.5-0.8B</th><td>95.4</td><td>99.4</td><td>95.4</td><td>96.4</td><td>96.7</td></tr>
+              <tr><th scope="row">Qwen3.5-2B</th><td>97.8</td><td class="best">100.0</td><td class="best">98.0</td><td class="best">97.4</td><td>98.3</td></tr>
+              <tr><th scope="row">Qwen3.5-4B</th><td>97.4</td><td>99.6</td><td>97.2</td><td>95.2</td><td>97.4</td></tr>
+              <tr><th scope="row">Qwen3-VL-2B</th><td>99.0</td><td>99.2</td><td>96.6</td><td>94.8</td><td>97.4</td></tr>
+              <tr class="ours"><th scope="row">Qwen3-VL-4B</th><td class="best">99.2</td><td class="best">100.0</td><td class="best">98.0</td><td>96.4</td><td class="best">98.4</td></tr>
+              <tr><th scope="row">Qwen3-VL-8B</th><td>98.0</td><td>99.4</td><td>97.4</td><td>95.8</td><td>97.7</td></tr>
+              </tbody>
+            </table>
+          </div>
+            </div>
+          </details>
+        </div>
+        <p class="table-note">Tables VI–IX report per-suite success rates (%) and their four-suite average. Bold blue cells mark the best result in each metric column of the displayed comparison, including ties. All table numbers refer to the extended paper.</p>
 
+        <div class="benchmark-block" id="libero-results">
+          <div class="section-heading"><div><p class="section-kicker">Core-recipe benchmarks</p><h2>Strong performance<br>from the base model</h2></div><p>The original VLANeXt reaches 97.4% on LIBERO. On LIBERO-plus, it achieves 83.9% without perturbation-specific training, a gain of 14.3 percentage points over OpenVLA-OFT.</p></div>
+          <div class="table-heading"><div><p class="table-label">Table II · LIBERO</p><h3>Four suites of manipulation tasks</h3></div><p>Success rate (%) across Spatial, Object, Goal, and Long. Comparisons are those reported in the paper.</p></div>
+          <div class="table-scroll" role="region" aria-label="LIBERO benchmark · success rate (%) · Family Table II" tabindex="0">
+            <table id="libero-table" class="data-table ">
+              <caption class="sr-only">LIBERO benchmark · success rate (%) · Family Table II</caption>
+              <thead><tr><th scope="col">Model</th><th scope="col">Spatial</th><th scope="col">Object</th><th scope="col">Goal</th><th scope="col">Long</th><th scope="col">Average ↑</th></tr></thead>
+              <tbody>
+              <tr class="group-row"><th colspan="6" scope="colgroup">Direct policy models</th></tr>
+              <tr><th scope="row">Diffusion Policy</th><td>78.3</td><td>92.5</td><td>68.3</td><td>50.5</td><td>72.4</td></tr>
+              <tr><th scope="row">Octo</th><td>78.9</td><td>85.7</td><td>84.6</td><td>51.5</td><td>75.1</td></tr>
+              <tr><th scope="row">MDT</th><td>78.5</td><td>87.5</td><td>73.5</td><td>64.8</td><td>76.4</td></tr>
+              <tr class="group-row"><th colspan="6" scope="colgroup">Vision-language-action models</th></tr>
+              <tr><th scope="row">TraceVLA</th><td>84.6</td><td>85.2</td><td>75.1</td><td>54.1</td><td>74.8</td></tr>
+              <tr><th scope="row">OpenVLA</th><td>84.7</td><td>88.4</td><td>79.2</td><td>53.7</td><td>76.5</td></tr>
+              <tr><th scope="row">SpatialVLA</th><td>88.2</td><td>89.9</td><td>78.6</td><td>55.5</td><td>78.1</td></tr>
+              <tr><th scope="row">WorldVLA</th><td>85.6</td><td>89.0</td><td>82.6</td><td>59.0</td><td>79.1</td></tr>
+              <tr><th scope="row">CoT-VLA</th><td>87.5</td><td>91.6</td><td>87.6</td><td>69.0</td><td>83.9</td></tr>
+              <tr><th scope="row">π<sub>0</sub>-Fast</th><td>96.4</td><td>96.8</td><td>88.6</td><td>60.2</td><td>85.5</td></tr>
+              <tr><th scope="row">π<sub>0</sub></th><td>90.0</td><td>86.0</td><td>95.0</td><td>73.0</td><td>86.0</td></tr>
+              <tr><th scope="row">NORA</th><td>92.2</td><td>95.4</td><td>89.4</td><td>74.6</td><td>87.9</td></tr>
+              <tr><th scope="row">SmolVLA</th><td>93.0</td><td>94.0</td><td>91.0</td><td>77.0</td><td>88.8</td></tr>
+              <tr><th scope="row">UniVLA</th><td>96.5</td><td>96.8</td><td>95.6</td><td>92.0</td><td>95.2</td></tr>
+              <tr><th scope="row">FLOWER</th><td>97.5</td><td>99.1</td><td>96.1</td><td class="best">94.9</td><td>96.9</td></tr>
+              <tr><th scope="row">π<sub>0.5</sub></th><td>98.8</td><td>98.2</td><td class="best">98.0</td><td>92.4</td><td>96.9</td></tr>
+              <tr><th scope="row">OpenVLA-OFT</th><td>97.6</td><td>98.4</td><td>97.9</td><td>94.5</td><td>97.1</td></tr>
+              <tr class="group-row"><th colspan="6" scope="colgroup">Our core recipe</th></tr>
+              <tr class="ours"><th scope="row">VLANeXt (Base)</th><td class="best">99.0</td><td class="best">99.2</td><td>96.6</td><td>94.8</td><td class="best">97.4</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note"><span class="legend-best">Best result</span> Bold blue cells indicate the best result in each column, including ties.</p>
+        </div>
+        <div class="benchmark-block" id="libero-plus-results">
+          <div class="table-heading"><div><p class="table-label">Table III · LIBERO-plus</p><h3>Robustness under unseen perturbations</h3></div><p>All models are trained on LIBERO and evaluated directly on LIBERO-plus. Seven perturbation categories test visual, physical, and semantic robustness.</p></div>
+          <div class="table-scroll" role="region" aria-label="LIBERO-plus benchmark · success rate (%) · Family Table III" tabindex="0">
+            <table id="libero-plus-table" class="data-table wide-table">
+              <caption class="sr-only">LIBERO-plus benchmark · success rate (%) · Family Table III</caption>
+              <thead><tr><th scope="col">Model</th><th scope="col">Suite</th><th scope="col">Camera</th><th scope="col">Robot</th><th scope="col">Language</th><th scope="col">Light</th><th scope="col">Background</th><th scope="col">Noise</th><th scope="col">Layout</th><th scope="col">Total ↑</th></tr></thead>
+              <tbody>
+              <tr><th scope="row">OpenVLA</th><td>Average</td><td>0.8</td><td>3.5</td><td>23.0</td><td>8.1</td><td>34.8</td><td>15.2</td><td>28.5</td><td>15.6</td></tr>
+              <tr><th scope="row">WorldVLA</th><td>Average</td><td>0.1</td><td>27.9</td><td>41.6</td><td>43.7</td><td>17.1</td><td>10.9</td><td>38.0</td><td>25.0</td></tr>
+              <tr><th scope="row">NORA</th><td>Average</td><td>2.2</td><td>37.0</td><td>65.1</td><td>45.7</td><td>58.6</td><td>12.8</td><td>62.1</td><td>39.0</td></tr>
+              <tr><th scope="row">UniVLA</th><td>Average</td><td>1.8</td><td>46.2</td><td>69.6</td><td>69.0</td><td>81.0</td><td>21.2</td><td>31.9</td><td>42.9</td></tr>
+              <tr><th scope="row">π<sub>0</sub></th><td>Average</td><td>13.8</td><td>6.0</td><td>58.8</td><td>85.0</td><td>81.4</td><td>79.0</td><td>68.9</td><td>53.6</td></tr>
+              <tr><th scope="row">π<sub>0</sub>-Fast</th><td>Average</td><td>65.1</td><td>21.6</td><td>61.0</td><td>73.2</td><td>73.2</td><td>74.4</td><td>68.8</td><td>61.6</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">OpenVLA-OFT · per-suite results</th></tr>
+              <tr><th scope="row">OpenVLA-OFT</th><td>Spatial</td><td>88.3</td><td>40.0</td><td>80.5</td><td>98.3</td><td>97.3</td><td>96.3</td><td>93.9</td><td>84.0</td></tr>
+              <tr><th scope="row">OpenVLA-OFT</th><td>Object</td><td>38.9</td><td>25.4</td><td>99.0</td><td>73.7</td><td>97.6</td><td>72.3</td><td>71.8</td><td>66.5</td></tr>
+              <tr><th scope="row">OpenVLA-OFT</th><td>Goal</td><td>62.0</td><td>25.2</td><td>53.2</td><td>93.9</td><td>92.5</td><td>75.2</td><td>59.1</td><td>63.0</td></tr>
+              <tr><th scope="row">OpenVLA-OFT</th><td>Long</td><td>38.7</td><td>38.2</td><td>87.0</td><td>89.4</td><td>86.8</td><td>63.5</td><td>76.9</td><td>66.4</td></tr>
+              <tr><th scope="row">OpenVLA-OFT</th><td>Average</td><td>56.4</td><td>31.9</td><td>79.5</td><td>88.7</td><td class="best">93.3</td><td>75.8</td><td>74.2</td><td>69.6</td></tr>
+              <tr class="group-row"><th colspan="10" scope="colgroup">VLANeXt · per-suite results</th></tr>
+              <tr class="ours"><th scope="row">VLANeXt</th><td>Spatial</td><td>95.7</td><td>78.6</td><td>86.9</td><td>99.7</td><td>98.8</td><td>98.0</td><td>96.6</td><td>93.1</td></tr>
+              <tr class="ours"><th scope="row">VLANeXt</th><td>Object</td><td>99.5</td><td>48.5</td><td>98.6</td><td>99.3</td><td>84.7</td><td>99.8</td><td>78.2</td><td>86.5</td></tr>
+              <tr class="ours"><th scope="row">VLANeXt</th><td>Goal</td><td>96.6</td><td>63.6</td><td>51.5</td><td>97.5</td><td>70.8</td><td>96.8</td><td>63.9</td><td>76.2</td></tr>
+              <tr class="ours"><th scope="row">VLANeXt</th><td>Long</td><td>69.7</td><td>72.0</td><td>90.3</td><td>86.9</td><td>75.8</td><td>81.7</td><td>84.3</td><td>79.7</td></tr>
+              <tr class="ours"><th scope="row">VLANeXt</th><td>Average</td><td class="best">90.4</td><td class="best">65.7</td><td class="best">81.8</td><td class="best">95.9</td><td>82.5</td><td class="best">94.1</td><td class="best">80.8</td><td class="best">83.9</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note"><span class="legend-best">Best average</span> Highlighting compares only the Average rows. “Total” is the aggregate reported in the paper, not a simple mean of the seven displayed categories.</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Following the rise of large foundation models, Vision–Language–Action models (VLAs) emerged, leveraging strong visual and language understanding for general-purpose policy learning. Yet, the current VLA landscape remains fragmented and exploratory. Although many groups have proposed their own VLA models, inconsistencies in training protocols and evaluation settings make it difficult to identify which design choices truly matter. To bring structure to this evolving space, we reexamine the VLA design space under a unified framework and evaluation setup. Starting from a simple VLA baseline similar to RT-2 and OpenVLA, we systematically dissect design choices along three dimensions: foundational components, perception essentials, and action modelling perspectives. From this study, we distill 12 key findings that together form a practical recipe for building strong VLA models. The outcome of this exploration is a simple yet effective model, VLANeXt. VLANeXt outperforms prior state-of-the-art methods on the LIBERO and LIBERO-plus benchmarks and demonstrates strong generalization in real-world experiments. We will release a unified, easy-to-use codebase that serves as a common platform for the community to reproduce our findings, explore the design space, and build new VLA variants on top of a shared foundation. 
-          </p>
-        </div>
+    <section class="section section-shell" id="demos" aria-labelledby="demos-title">
+      <div class="section-heading"><div><p class="section-kicker">VLANeXt in action</p><h2 id="demos-title">From simulation<br>to real robots</h2></div><p>Real-world experiments validate the core VLANeXt model on Franka single-arm and Aloha bimanual setups. These demonstrations and results are from the core-recipe study.</p></div>
+      <div class="table-heading"><div><p class="table-label">Table IV · Real-world evaluation</p><h3>Single-arm and bimanual manipulation</h3></div><p>Successful trials / 20 attempts per task. Each task uses 50 training demonstrations after DROID pretraining.</p></div>
+          <div class="table-scroll" role="region" aria-label="Real-world evaluation · successful trials out of 20 · Family Table IV" tabindex="0">
+            <table id="real-world-table" class="data-table ">
+              <caption class="sr-only">Real-world evaluation · successful trials out of 20 · Family Table IV</caption>
+              <thead><tr><th rowspan="2" scope="col">Model</th><th colspan="2" scope="colgroup">Single arm</th><th colspan="2" scope="colgroup">Bimanual arms</th></tr><tr><th scope="col">Clean table</th><th scope="col">Drawer manipulation</th><th scope="col">Clean table</th><th scope="col">Lifting</th></tr></thead>
+              <tbody>
+              <tr><th scope="row">OpenVLA-OFT</th><td>7/20</td><td>7/20</td><td>5/20</td><td>9/20</td></tr>
+              <tr><th scope="row">π<sub>0</sub></th><td>10/20</td><td>8/20</td><td>10/20</td><td>13/20</td></tr>
+              <tr class="ours"><th scope="row">VLANeXt</th><td class="best">14/20</td><td class="best">11/20</td><td class="best">11/20</td><td class="best">15/20</td></tr>
+              </tbody>
+            </table>
+          </div>
+      <div class="video-grid real-video-grid">
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Clean table · single arm" width="410" height="720">
+              <source src="./static/videos/real_world_1.mp4" type="video/mp4">
+              <a href="./static/videos/real_world_1.mp4">Watch: Clean table · single arm</a>
+            </video>
+            <figcaption>Clean table · single arm</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Clean table · single arm" width="406" height="720">
+              <source src="./static/videos/real_world_2.mp4" type="video/mp4">
+              <a href="./static/videos/real_world_2.mp4">Watch: Clean table · single arm</a>
+            </video>
+            <figcaption>Clean table · single arm</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Open drawer and place object · single arm" width="410" height="720">
+              <source src="./static/videos/real_world_3.mp4" type="video/mp4">
+              <a href="./static/videos/real_world_3.mp4">Watch: Open drawer and place object · single arm</a>
+            </video>
+            <figcaption>Open drawer and place object · single arm</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Open drawer and place object · single arm" width="400" height="720">
+              <source src="./static/videos/real_world_4.mp4" type="video/mp4">
+              <a href="./static/videos/real_world_4.mp4">Watch: Open drawer and place object · single arm</a>
+            </video>
+            <figcaption>Open drawer and place object · single arm</figcaption>
+          </figure>
+          <figure class="demo-card wide-demo">
+            <video controls muted loop playsinline preload="none" aria-label="Clean table · bimanual arms" width="1280" height="720">
+              <source src="./static/videos/real_world_5.mp4" type="video/mp4">
+              <a href="./static/videos/real_world_5.mp4">Watch: Clean table · bimanual arms</a>
+            </video>
+            <figcaption>Clean table · bimanual arms</figcaption>
+          </figure>
+          <figure class="demo-card wide-demo">
+            <video controls muted loop playsinline preload="none" aria-label="Lifting · bimanual arms" width="1280" height="720">
+              <source src="./static/videos/real_world_6.mp4" type="video/mp4">
+              <a href="./static/videos/real_world_6.mp4">Watch: Lifting · bimanual arms</a>
+            </video>
+            <figcaption>Lifting · bimanual arms</figcaption>
+          </figure>
       </div>
-    </div>
+      <div class="demo-section"><p class="section-kicker">LIBERO demonstrations</p><h3>Following diverse language instructions</h3><div class="video-grid">
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Pick up the black bowl between the plate and the ramekin and place it on the plate." width="256" height="256">
+              <source src="./static/videos/libero_1.mp4" type="video/mp4">
+              <a href="./static/videos/libero_1.mp4">Watch: Pick up the black bowl between the plate and the ramekin and place it on the plate.</a>
+            </video>
+            <figcaption>Pick up the black bowl between the plate and the ramekin and place it on the plate.</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Pick up the tomato sauce and place it in the basket." width="256" height="256">
+              <source src="./static/videos/libero_2.mp4" type="video/mp4">
+              <a href="./static/videos/libero_2.mp4">Watch: Pick up the tomato sauce and place it in the basket.</a>
+            </video>
+            <figcaption>Pick up the tomato sauce and place it in the basket.</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Open the middle drawer of the cabinet." width="256" height="256">
+              <source src="./static/videos/libero_3.mp4" type="video/mp4">
+              <a href="./static/videos/libero_3.mp4">Watch: Open the middle drawer of the cabinet.</a>
+            </video>
+            <figcaption>Open the middle drawer of the cabinet.</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Put both the alphabet soup and the tomato sauce in the basket." width="256" height="256">
+              <source src="./static/videos/libero_4.mp4" type="video/mp4">
+              <a href="./static/videos/libero_4.mp4">Watch: Put both the alphabet soup and the tomato sauce in the basket.</a>
+            </video>
+            <figcaption>Put both the alphabet soup and the tomato sauce in the basket.</figcaption>
+          </figure>
+      </div></div>
+      <div class="demo-section"><p class="section-kicker">LIBERO-plus demonstrations</p><h3>One task, seven kinds of change</h3><p class="section-description">“Pick up the black bowl next to the plate and place it on the plate,” under seven distinct perturbation categories.</p><div class="video-grid perturbation-grid">
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Background" width="256" height="256">
+              <source src="./static/videos/libero_plus_1.mp4" type="video/mp4">
+              <a href="./static/videos/libero_plus_1.mp4">Watch: Background</a>
+            </video>
+            <figcaption>Background</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Camera" width="256" height="256">
+              <source src="./static/videos/libero_plus_2.mp4" type="video/mp4">
+              <a href="./static/videos/libero_plus_2.mp4">Watch: Camera</a>
+            </video>
+            <figcaption>Camera</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Language" width="256" height="256">
+              <source src="./static/videos/libero_plus_3.mp4" type="video/mp4">
+              <a href="./static/videos/libero_plus_3.mp4">Watch: Language</a>
+            </video>
+            <figcaption>Language</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Layout" width="256" height="256">
+              <source src="./static/videos/libero_plus_4.mp4" type="video/mp4">
+              <a href="./static/videos/libero_plus_4.mp4">Watch: Layout</a>
+            </video>
+            <figcaption>Layout</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Lighting" width="256" height="256">
+              <source src="./static/videos/libero_plus_5.mp4" type="video/mp4">
+              <a href="./static/videos/libero_plus_5.mp4">Watch: Lighting</a>
+            </video>
+            <figcaption>Lighting</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Noise" width="256" height="256">
+              <source src="./static/videos/libero_plus_6.mp4" type="video/mp4">
+              <a href="./static/videos/libero_plus_6.mp4">Watch: Noise</a>
+            </video>
+            <figcaption>Noise</figcaption>
+          </figure>
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Robot" width="256" height="256">
+              <source src="./static/videos/libero_plus_7.mp4" type="video/mp4">
+              <a href="./static/videos/libero_plus_7.mp4">Watch: Robot</a>
+            </video>
+            <figcaption>Robot</figcaption>
+          </figure>
+      </div></div>
+      <details class="study-details overview-video"><summary><span><span class="table-label">Core study · Video overview</span><strong>Watch the original VLANeXt overview</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="details-body">
+          <figure class="demo-card ">
+            <video controls muted loop playsinline preload="none" aria-label="Original VLANeXt core-design study overview" poster="./static/images/roadmap_page.png" width="1388" height="1080">
+              <source src="./static/videos/roadmap_page.mp4" type="video/mp4">
+              <a href="./static/videos/roadmap_page.mp4">Watch: Original VLANeXt core-design study overview</a>
+            </video>
+            <figcaption>Original VLANeXt core-design study overview</figcaption>
+          </figure>
+      </div></details>
+    </section>
 
-    <!-- Method Overall. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Method Overall</h2>
-        <div class="content has-text-centered">
-          <p class="has-text-left">
-            We re-examine the VLA design space through a systematic study along three key dimensions: <strong>foundational components</strong>, <strong>perception essentials</strong>, and <strong>action modelling</strong>. This structured exploration yields 12 findings that together form a practical recipe for building strong VLA models.
-          </p>
-          <img src="./static/images/roadmap.png" width="75%" alt="roadmap"/>
-          <br>
-          <br>
-          <p class="has-text-left">The resulting VLANeXt framework integrates the best practices identified from our exploration into a unified architecture.</p>
-          <img src="./static/images/framework.png" width="100%" alt="framework"/>
-        </div>
+    <section class="section citation-section" id="BibTeX" aria-labelledby="citation-title">
+      <div class="section-shell">
+        <div class="section-heading"><div><p class="section-kicker">Citation</p><h2 id="citation-title">Build on VLANeXt</h2></div><p>If you build on the core recipe, please cite the ICML paper. If you use the Family variants or extended studies, please also cite VLANeXt Family.</p></div>
+        <article class="citation-block" id="cite-icml">
+          <div class="citation-heading"><h3>VLANeXt · ICML 2026</h3><button type="button" data-copy="bibtex-icml" hidden>Copy BibTeX</button></div>
+          <pre><code id="bibtex-icml">@inproceedings{wu2026vlanext,
+  title={VLANeXt: Recipes for Building Strong VLA Models},
+  author={Xiao-Ming Wu and Bin Fan and Kang Liao and Jian-jian Jiang and Runze Yang and Yihang Luo and Zhonghua Wu and Wei-Shi Zheng and Chen Change Loy},
+  booktitle={ICML},
+  year={2026}
+}</code></pre>
+        </article>
+        <article class="citation-block" id="cite-family">
+          <div class="citation-heading"><h3>VLANeXt Family · Extended paper</h3><button type="button" data-copy="bibtex-family" hidden>Copy BibTeX</button></div>
+          <!-- Use a manuscript citation until the Family arXiv identifier is assigned. -->
+          <pre><code id="bibtex-family">@article{wu2026vlanextfamily,
+  title={VLANeXt Family: A Systematic Study of VLA Models from Core Recipes to Emerging Paradigms},
+  author={Xiao-Ming Wu and Kang Liao and Yihang Luo and Bin Fan and Jian-jian Jiang and Runze Yang and Zhonghua Wu and Wei-Shi Zheng and Chen Change Loy},
+  journal={Preprint},
+  year={2026},
+  url={https://dravenalg.github.io/projects/VLANeXt/VLANeXt-Family.pdf}
+}</code></pre>
+        </article>
+        <p class="copy-status" role="status" aria-live="polite"></p>
       </div>
-    </div>
-
-    <!-- Result Tables. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Recipes Exploration Results</h2>
-        <div class="content has-text-centered">
-          <p class="has-text-left">
-            We conduct extensive ablations across 12 design spaces. The table below summarizes each finding with the variants in each space, serving as a complehensive recipe for practitioners.
-          </p>
-          <img src="./static/images/recipies_table.png" width="100%" alt="recipes table"/>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">LIBERO Benchmark Results</h2>
-        <div class="content has-text-centered">
-          <p class="has-text-left">
-          VLANeXt achieves state-of-the-art performance. It outperforms strong baselines, demonstrating its versatility across diverse manipulation scenarios with varying task configurations.
-          </p>
-          <img src="./static/images/libero_table.png" width="50%" alt="LIBERO benchmark table"/>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">LIBERO-Plus Benchmark Results</h2>
-        <div class="content has-text-centered">
-          <p class="has-text-left">
-            LIBERO-Plus introduces seven categories of systematic perturbations, background, camera, language, layout, lighting, noise, and robot changes, to stress-test policy robustness. VLANeXt maintains consistently high success rates across all perturbation types, while competing methods exhibit performance degradation, validating the robustness of our design choices.
-          </p>
-          <img src="./static/images/libero_plus_table.png" width="100%" alt="LIBERO-Plus benchmark table"/>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Real World Video Section -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Real World Demos</h2>
-    <div class="content has-text-left">
-      <p>
-        We deploy VLANeXt on physical robot platforms to validate real-world robustness. The model successfully executes a variety of everyday manipulation tasks, including table cleaning, drawer manipulation, bimanual table cleaning, and bimanual lifting, on both single-arm and bimanual-arm setups, demonstrating reliable performance.
-      </p>
-    </div>
-    <div class="columns is-centered is-multiline">
-      <div class="column is-3">
-        <div class="content">
-          <video id="real-world-1" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none; display: block; margin: 0 auto;">
-             <source src="./static/videos/real_world_1.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">clean table (single arm)</p>
-        </div>
-      </div>
-      <div class="column is-3">
-        <div class="content">
-          <video id="real-world-2" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none; display: block; margin: 0 auto;">
-             <source src="./static/videos/real_world_2.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">clean table (single arm)</p>
-        </div>
-      </div>
-      <div class="column is-3">
-        <div class="content">
-          <video id="real-world-3" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none; display: block; margin: 0 auto;">
-             <source src="./static/videos/real_world_3.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">open drawer and place object (single arm)</p>
-        </div>
-      </div>
-      <div class="column is-3">
-        <div class="content">
-          <video id="real-world-4" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none; display: block; margin: 0 auto;">
-             <source src="./static/videos/real_world_4.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">open drawer and place object (single arm)</p>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="content">
-          <video id="real-world-5" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none; display: block; margin: 0 auto;">
-             <source src="./static/videos/real_world_5.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">bimanual clean table (bimanual arms)</p>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="content">
-          <video id="real-world-6" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none; display: block; margin: 0 auto;">
-             <source src="./static/videos/real_world_6.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">lifting (bimanual arms)</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Libero Benchmark Video Section -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Libero Benchmark Demos</h2>
-    <div class="content has-text-left">
-      <p>
-        Qualitative rollouts from the LIBERO benchmark illustrate VLANeXt's ability to follow diverse natural language instructions and perform precise manipulation across varied environments and object configurations.
-      </p>
-    </div>
-    <div class="columns is-centered">
-      <div class="column best-method">
-        <div class="content">
-          <video id="libero-1" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none;">
-            <source src="./static/videos/libero_1.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">pick up the black bowl between the plate and the ramekin and place it on the plate</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <video id="libero-2" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none;">
-            <source src="./static/videos/libero_2.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">pick up the tomato sauce and place it in the basket</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <video id="libero-3" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none;">
-            <source src="./static/videos/libero_3.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">open the middle drawer of the cabinet</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <video id="libero-4" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none;">
-            <source src="./static/videos/libero_4.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">put both the alphabet soup and the tomato sauce in the basket</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Libero-Plus Benchmark Video Section -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Libero-Plus Benchmark Demos</h2>
-     <div class="content has-text-left">
-      <p>
-        Qualitative rollouts from LIBERO-Plus demonstrate VLANeXt's robustness, where the model complete the task <strong>"pick up the black bowl next to the plate and place it on the plate"</strong> under seven distinct perturbation categories. Despite significant environmental changes, the model maintains stable and accurate manipulation.
-      </p>
-    </div>
-    <!-- Row 1: 4 videos -->
-    <div class="columns is-centered">
-      <div class="column is-3">
-        <div class="content">
-          <video id="libero-plus-1" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none;">
-             <source src="./static/videos/libero_plus_1.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">background perturbation</p>
-        </div>
-      </div>
-      <div class="column is-3">
-        <div class="content">
-           <video id="libero-plus-2" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none;">
-             <source src="./static/videos/libero_plus_2.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">camera perturbation</p>
-        </div>
-      </div>
-      <div class="column is-3">
-        <div class="content">
-           <video id="libero-plus-3" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none;">
-             <source src="./static/videos/libero_plus_3.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">language perturbation</p>
-        </div>
-      </div>
-      <div class="column is-3">
-        <div class="content">
-           <video id="libero-plus-4" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none;">
-             <source src="./static/videos/libero_plus_4.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">layout perturbation</p>
-        </div>
-      </div>
-    </div>
-    <!-- Row 2: 3 videos -->
-    <div class="columns is-centered">
-      <div class="column is-3">
-        <div class="content">
-          <video id="libero-plus-5" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none;">
-             <source src="./static/videos/libero_plus_5.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">light perturbation</p>
-        </div>
-      </div>
-      <div class="column is-3">
-        <div class="content">
-           <video id="libero-plus-6" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none;">
-             <source src="./static/videos/libero_plus_6.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">noise perturbation</p>
-        </div>
-      </div>
-      <div class="column is-3">
-        <div class="content">
-           <video id="libero-plus-7" autoplay controls muted loop playsinline width="100%" style="border-radius: 5px; border: none;">
-             <source src="./static/videos/libero_plus_7.mp4" type="video/mp4">
-          </video>
-          <p class="is-size-6 has-text-centered">robot perturbation</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>
-      @inproceedings{wu2026vlanext,
-        title={VLANeXt: Recipes for Building Strong VLA Models}, 
-        author={Xiao-Ming Wu and Bin Fan and Kang Liao and Jian-Jian Jiang and Runze Yang and Yihang Luo and Zhonghua Wu and Wei-Shi Zheng and Chen Change Loy},
-        booktitle={ICML},
-        year={2026},
-      }
-    </code></pre>
-  </div>
-</section>
-
-<script src="index.js"></script>
+    </section>
+  </main>
+  <footer class="site-footer section-shell"><div><a class="brand" href="#top">VLANeXt <span>Family</span></a><p>From Core Recipes to Emerging Paradigms</p></div><p>Design inspired by <a href="https://kangliao929.github.io/projects/puffin-world/">Puffin-World</a>.</p><a href="#top">Back to top ↑</a></footer>
 </body>
 </html>
