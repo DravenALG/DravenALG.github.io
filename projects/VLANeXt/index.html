@@ -40,24 +40,20 @@
           <h2 id="icml-title">VLANeXt: Recipes for Building Strong VLA Models</h2>
           <p class="authors"><span>Xiao-Ming Wu<sup>1</sup></span>, <span>Bin Fan<sup>2</sup></span>, <span>Kang Liao<sup>1</sup></span>, <span>Jian-jian Jiang<sup>2</sup></span>, <span>Runze Yang<sup>3</sup></span>, <span>Yihang Luo<sup>1</sup></span>, <span>Zhonghua Wu<sup>4</sup></span>, <span>Wei-Shi Zheng<sup>2</sup></span>, <span>Chen Change Loy<sup>1,5,*</sup></span></p>
           <p class="paper-description">A unified design study distilling more than 500 experiments into 12 findings and the base VLANeXt model.</p>
-          <div class="paper-links"><a href="VLANeXt-ICML.pdf">Read paper <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/abs/2602.18532">arXiv</a><a href="#cite-icml">BibTeX</a></div>
+          <div class="paper-links"><a href="VLANeXt-ICML.pdf">Read paper <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/abs/2602.18532">arXiv</a><a href="#BibTeX">BibTeX</a></div>
         </article>
         <article class="paper-card family-paper" aria-labelledby="family-title">
           <div class="paper-meta"><span class="badge">Extended paper · 2026</span><span>02 · Emerging paradigms</span></div>
           <h2 id="family-title">VLANeXt Family: A Systematic Study of VLA Models from Core Recipes to Emerging Paradigms</h2>
           <p class="authors"><span>Xiao-Ming Wu<sup>1</sup></span>, <span>Kang Liao<sup>1</sup></span>, <span>Yihang Luo<sup>1</sup></span>, <span>Bin Fan<sup>2</sup></span>, <span>Jian-jian Jiang<sup>2</sup></span>, <span>Runze Yang<sup>3</sup></span>, <span>Zhonghua Wu<sup>4</sup></span>, <span>Wei-Shi Zheng<sup>2</sup></span>, <span>Chen Change Loy<sup>1,5,*</sup></span></p>
-          <p class="paper-description">Five new variants test the core recipe across model scales, latent actions, predictive representations, and world action models.</p>
+          <p class="paper-description">Five new variants test the core recipe across model scaling, latent-action pretraining, latent predictive representation learning, and world action modeling.</p>
           <!-- The README's Family arXiv identifier is a placeholder. Link to the supplied PDF until a real identifier is assigned. -->
-          <div class="paper-links"><a href="VLANeXt-Family.pdf">Read paper <span aria-hidden="true">↗</span></a><a href="#cite-family">BibTeX</a></div>
+          <div class="paper-links"><a href="VLANeXt-Family.pdf">Read paper <span aria-hidden="true">↗</span></a><a href="#BibTeX">BibTeX</a></div>
         </article>
       </div>
       <p class="affiliations"><span><sup>1</sup> S-Lab, Nanyang Technological University</span><span><sup>2</sup> Sun Yat-sen University</span><span><sup>3</sup> Shanghai Jiao Tong University</span><span><sup>4</sup> SenseTime Research</span><span><sup>5</sup> ACE Robotics</span></p>
       <p class="correspondence">* Corresponding author: Chen Change Loy</p>
     </section>
-
-    <div class="banner section-shell">
-      <img src="./static/images/longhead.png" width="2558" height="697" alt="Franka robot arm with a diverse collection of objects for real-world manipulation">
-    </div>
 
     <section class="section-shell section" id="overview" aria-labelledby="overview-title">
       <div class="section-heading">
@@ -77,7 +73,7 @@
         </figure>
         <div class="roadmap-story">
           <article><p class="step-number">01 · Establish the recipe</p><h3>Make each design choice count</h3><p>The ICML study examines foundational components, perception essentials, and action modeling perspectives. Their combination yields the original VLANeXt, now the Base model of the family.</p><a class="text-link" href="#recipe">Explore the core recipe <span aria-hidden="true">↓</span></a></article>
-          <article><p class="step-number">02 · Test its generality</p><h3>Change the scale and the prior</h3><p>The extended study introduces compact and larger models, latent-action pretraining, semantic future prediction, and joint video-action learning. Controlled ablations examine whether the same recipe remains useful in each setting.</p><a class="text-link" href="#paradigms">Meet the family <span aria-hidden="true">↓</span></a></article>
+          <article><p class="step-number">02 · Test its generality</p><h3>Change the scale and the prior</h3><p>The extended study explores model scaling, latent-action pretraining, latent predictive representation learning, and world action modeling. Controlled ablations examine whether the same recipe remains useful in each setting.</p><a class="text-link" href="#paradigms">Meet the family <span aria-hidden="true">↓</span></a></article>
           <article><p class="step-number">03 · Build on shared foundations</p><h3>One codebase, six variants</h3><p>Both papers share a model implementation, training entry point, and evaluation pipeline. Configuration files select the backbone and learning objectives.</p><a class="text-link" href="https://github.com/DravenALG/VLANeXt#models-and-configurations">Models and configurations <span aria-hidden="true">↗</span></a></article>
         </div>
       </div>
@@ -155,7 +151,7 @@
               </tbody>
             </table>
           </div>
-            <p class="table-note">“—” or “-” denotes an unreported result. Precise values follow Table I of the extended paper; the supplied roadmap is a visual summary and contains some differing values.</p>
+            <p class="table-note">“—” or “-” denotes an unreported result. Values follow Table I of the extended paper.</p>
           </div>
         </details>
       </div>
@@ -164,14 +160,14 @@
     <section class="section section-shell" id="paradigms" aria-labelledby="paradigms-title">
       <div class="section-heading">
         <div><p class="section-kicker">VLANeXt Family · Extended study</p><h2 id="paradigms-title">Four directions.<br>A common foundation.</h2></div>
-        <p>The Family study asks whether the core recipe transfers to different model capacities and sources of prior knowledge: visual transitions, semantic representations, and video dynamics.</p>
+        <p>The Family study asks whether the core recipe remains effective across model-capacity priors, action-like priors, semantic priors, and world-dynamics priors.</p>
       </div>
       <figure class="paper-figure paradigms-figure">
-        <a href="./static/images/paradigms.png" aria-label="Open the full-resolution emerging-paradigm architectures"><img src="./static/images/paradigms.png" width="1385" height="1133" loading="lazy" alt="Four extensions of VLANeXt: backbone scaling, latent-action pretraining, JEPA-style prediction in DINO space, and joint future-video and action modeling"></a>
+        <a href="./static/images/paradigms.png" aria-label="Open the full-resolution emerging-paradigm architectures"><img src="./static/images/paradigms.png" width="1385" height="1133" loading="lazy" alt="Four extensions of VLANeXt: model scaling, latent-action pretraining, latent predictive representation learning, and world action modeling"></a>
         <figcaption>From the core architecture to the Family: (a) model scaling, (b) latent-action pretraining, (c) latent predictive representation learning, and (d) world action modeling.</figcaption>
       </figure>
       <div class="paradigm-grid">
-        <article><span class="step-number">A · Model capacity</span><h3>VLANeXt-S / Base / L</h3><p>Apply the recipe to Qwen3.5-0.8B, Qwen3-VL-2B, and Qwen3-VL-4B backbones. The remaining architecture and training recipe are shared.</p></article>
+        <article><span class="step-number">A · Model-capacity priors</span><h3>VLANeXt-S / Base / L</h3><p>Apply the recipe to Qwen3.5-0.8B, Qwen3-VL-2B, and Qwen3-VL-4B backbones. The remaining architecture and training recipe are shared.</p></article>
         <article><span class="step-number">B · Action-like priors</span><h3>VLANeXt-LAM</h3><p>Learn latent actions from current and future frames with a VQ-VAE. Pretrain on those visual transitions, then fine-tune on labeled robot actions.</p></article>
         <article><span class="step-number">C · Semantic priors</span><h3>VLANeXt-JEPA</h3><p>Predict future DINOv3 features alongside actions. The best evaluated variant predicts the observation at the end of the current action horizon.</p></article>
         <article><span class="step-number">D · World-dynamics priors</span><h3>VLANeXt-WAM</h3><p>Replace the VLM with a pretrained Wan video-generation backbone and jointly learn video and actions. The fast connection transfers predictive priors without direct action attention to future video tokens.</p></article>
@@ -182,12 +178,12 @@
               <caption class="sr-only">VLANeXt family · released configurations and LIBERO average success rates</caption>
               <thead><tr><th scope="col">Model</th><th scope="col">Backbone</th><th scope="col">Focus</th><th scope="col">LIBERO avg. ↑</th><th scope="col">Configuration</th></tr></thead>
               <tbody>
-              <tr><th scope="row">VLANeXt-S</th><td>Qwen3.5-0.8B</td><td>Compact VLA</td><td>96.7</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-S_config.yaml" aria-label="VLANeXt-S training configuration">YAML ↗</a></td></tr>
+              <tr><th scope="row">VLANeXt-S</th><td>Qwen3.5-0.8B</td><td>Model scaling · small</td><td>96.7</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-S_config.yaml" aria-label="VLANeXt-S training configuration">YAML ↗</a></td></tr>
               <tr class="ours"><th scope="row">VLANeXt (Base / B)</th><td>Qwen3-VL-2B</td><td>Core recipe · ICML 2026</td><td>97.4</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-B_config.yaml" aria-label="VLANeXt-B training configuration">YAML ↗</a></td></tr>
-              <tr><th scope="row">VLANeXt-L</th><td>Qwen3-VL-4B</td><td>Larger VLA</td><td class="best">98.4</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-L_config.yaml" aria-label="VLANeXt-L training configuration">YAML ↗</a></td></tr>
-              <tr><th scope="row">VLANeXt-LAM</th><td>Qwen3-VL-2B</td><td>VQ-VAE latent-action pretraining</td><td>97.6</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-LAM_config.yaml" aria-label="VLANeXt-LAM training configuration">YAML ↗</a></td></tr>
-              <tr><th scope="row">VLANeXt-JEPA</th><td>Qwen3-VL-2B</td><td>Future DINOv3 feature prediction</td><td>97.7</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-JEPA_config.yaml" aria-label="VLANeXt-JEPA training configuration">YAML ↗</a></td></tr>
-              <tr><th scope="row">VLANeXt-WAM</th><td>Wan2.2-TI2V-5B</td><td>Joint video and action learning</td><td>98.2</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-WAM_config.yaml" aria-label="VLANeXt-WAM training configuration">YAML ↗</a></td></tr>
+              <tr><th scope="row">VLANeXt-L</th><td>Qwen3-VL-4B</td><td>Model scaling · large</td><td class="best">98.4</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-L_config.yaml" aria-label="VLANeXt-L training configuration">YAML ↗</a></td></tr>
+              <tr><th scope="row">VLANeXt-LAM</th><td>Qwen3-VL-2B</td><td>Latent-action pretraining</td><td>97.6</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-LAM_config.yaml" aria-label="VLANeXt-LAM training configuration">YAML ↗</a></td></tr>
+              <tr><th scope="row">VLANeXt-JEPA</th><td>Qwen3-VL-2B</td><td>Latent predictive representation learning</td><td>97.7</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-JEPA_config.yaml" aria-label="VLANeXt-JEPA training configuration">YAML ↗</a></td></tr>
+              <tr><th scope="row">VLANeXt-WAM</th><td>Wan2.2-TI2V-5B</td><td>World action modeling</td><td>98.2</td><td><a href="https://github.com/DravenALG/VLANeXt/blob/main/config/VLANeXt-WAM_config.yaml" aria-label="VLANeXt-WAM training configuration">YAML ↗</a></td></tr>
               </tbody>
             </table>
           </div>
@@ -198,7 +194,7 @@
       <div class="section-shell">
         <div class="section-heading">
           <div><p class="section-kicker">Controlled evaluation</p><h2 id="results-title">Does the recipe<br>carry over?</h2></div>
-          <p>Removing core ingredients reduces performance in every reported Family ablation. The largest observed drop is 11.8 percentage points when removing multi-view inputs from VLANeXt-LAM.</p>
+          <p>Removing core ingredients reduces performance in every reported Family ablation.</p>
         </div>
         <div class="table-heading"><div><p class="table-label">Table V · Emerging paradigms</p><h3>The core recipe across the family</h3></div><p>LIBERO four-suite average success rate (%). Parentheses show the change in percentage points relative to each variant’s full recipe.</p></div>
           <div class="table-scroll" role="region" aria-label="Core-recipe ablations across emerging paradigms · Family Table V" tabindex="0">
@@ -236,7 +232,7 @@
             </div>
           </details>
           <details class="study-details">
-            <summary><span><span class="table-label">Table VII · Predictive representations</span><strong>Align semantic prediction with the action horizon</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary>
+            <summary><span><span class="table-label">Table VII · Latent predictive representation learning</span><strong>Align semantic prediction with the action horizon</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary>
             <div class="details-body"><p class="table-description">Predicting DINOv3 features at the end of the current action horizon reaches 97.7%, compared with 96.6% for the episode-final target and 96.4% for the Emu3.5-token objective.</p>
           <div class="table-scroll" role="region" aria-label="Latent predictive objectives · Family Table VII" tabindex="0">
             <table id="jepa-table" class="data-table wide-table">
@@ -270,8 +266,8 @@
             </div>
           </details>
           <details class="study-details">
-            <summary><span><span class="table-label">Table IX · Model scaling</span><strong>Capacity helps, with diminishing returns</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary>
-            <div class="details-body"><p class="table-description">The recipe works across both Qwen families, but gains are not monotonic: Qwen3.5-2B and Qwen3-VL-4B outperform their larger counterparts in these LIBERO experiments.</p>
+            <summary><span><span class="table-label">Table IX · Model scaling</span><strong>The core recipe across model scales</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary>
+            <div class="details-body"><p class="table-description">We evaluate the core recipe with different backbone sizes from the Qwen3.5 and Qwen3-VL families under a shared LIBERO training and evaluation protocol.</p>
           <div class="table-scroll" role="region" aria-label="Backbone scaling · Family Table IX" tabindex="0">
             <table id="scaling-table" class="data-table ">
               <caption class="sr-only">Backbone scaling · Family Table IX</caption>
@@ -352,7 +348,7 @@
               </tbody>
             </table>
           </div>
-          <p class="table-note"><span class="legend-best">Best average</span> Highlighting compares only the Average rows. “Total” is the aggregate reported in the paper, not a simple mean of the seven displayed categories.</p>
+          <p class="table-note"><span class="legend-best">Best average</span> Highlighting compares only the Average rows.</p>
         </div>
       </div>
     </section>
@@ -415,7 +411,7 @@
             <figcaption>Lifting · bimanual arms</figcaption>
           </figure>
       </div>
-      <div class="demo-section"><p class="section-kicker">LIBERO demonstrations</p><h3>Following diverse language instructions</h3><div class="video-grid">
+      <div class="demo-section"><p class="section-kicker">LIBERO demonstrations</p><h3>Completing different tasks</h3><div class="video-grid">
           <figure class="demo-card ">
             <video controls muted loop playsinline preload="none" aria-label="Pick up the black bowl between the plate and the ramekin and place it on the plate." width="256" height="256">
               <source src="./static/videos/libero_1.mp4" type="video/mp4">
@@ -445,7 +441,7 @@
             <figcaption>Put both the alphabet soup and the tomato sauce in the basket.</figcaption>
           </figure>
       </div></div>
-      <div class="demo-section"><p class="section-kicker">LIBERO-plus demonstrations</p><h3>One task, seven kinds of change</h3><p class="section-description">“Pick up the black bowl next to the plate and place it on the plate,” under seven distinct perturbation categories.</p><div class="video-grid perturbation-grid">
+      <div class="demo-section"><p class="section-kicker">LIBERO-plus demonstrations</p><h3>One task, seven types of perturbations</h3><p class="section-description">“Pick up the black bowl next to the plate and place it on the plate,” under seven distinct perturbation categories.</p><div class="video-grid perturbation-grid">
           <figure class="demo-card ">
             <video controls muted loop playsinline preload="none" aria-label="Background" width="256" height="256">
               <source src="./static/videos/libero_plus_1.mp4" type="video/mp4">
@@ -496,39 +492,28 @@
             <figcaption>Robot</figcaption>
           </figure>
       </div></div>
-      <details class="study-details overview-video"><summary><span><span class="table-label">Core study · Video overview</span><strong>Watch the original VLANeXt overview</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="details-body">
-          <figure class="demo-card ">
-            <video controls muted loop playsinline preload="none" aria-label="Original VLANeXt core-design study overview" poster="./static/images/roadmap_page.png" width="1388" height="1080">
-              <source src="./static/videos/roadmap_page.mp4" type="video/mp4">
-              <a href="./static/videos/roadmap_page.mp4">Watch: Original VLANeXt core-design study overview</a>
-            </video>
-            <figcaption>Original VLANeXt core-design study overview</figcaption>
-          </figure>
-      </div></details>
     </section>
 
     <section class="section citation-section" id="BibTeX" aria-labelledby="citation-title">
       <div class="section-shell">
-        <div class="section-heading"><div><p class="section-kicker">Citation</p><h2 id="citation-title">Build on VLANeXt</h2></div><p>If you build on the core recipe, please cite the ICML paper. If you use the Family variants or extended studies, please also cite VLANeXt Family.</p></div>
-        <article class="citation-block" id="cite-icml">
-          <div class="citation-heading"><h3>VLANeXt · ICML 2026</h3><button type="button" data-copy="bibtex-icml" hidden>Copy BibTeX</button></div>
-          <pre><code id="bibtex-icml">@inproceedings{wu2026vlanext,
+        <div class="section-heading"><div><p class="section-kicker">Citation</p><h2 id="citation-title">Build on VLANeXt</h2></div><p>If you find our work useful, please cite both VLANeXt and VLANeXt Family.</p></div>
+        <article class="citation-block" id="cite-papers">
+          <div class="citation-heading"><h3>VLANeXt &amp; VLANeXt Family</h3><button type="button" data-copy="bibtex-papers" aria-label="Copy BibTeX for both papers" hidden>Copy BibTeX</button></div>
+          <!-- Use a manuscript citation until the Family arXiv identifier is assigned. -->
+          <pre><code id="bibtex-papers"><span id="cite-icml">@inproceedings{wu2026vlanext,
   title={VLANeXt: Recipes for Building Strong VLA Models},
   author={Xiao-Ming Wu and Bin Fan and Kang Liao and Jian-jian Jiang and Runze Yang and Yihang Luo and Zhonghua Wu and Wei-Shi Zheng and Chen Change Loy},
   booktitle={ICML},
   year={2026}
-}</code></pre>
-        </article>
-        <article class="citation-block" id="cite-family">
-          <div class="citation-heading"><h3>VLANeXt Family · Extended paper</h3><button type="button" data-copy="bibtex-family" hidden>Copy BibTeX</button></div>
-          <!-- Use a manuscript citation until the Family arXiv identifier is assigned. -->
-          <pre><code id="bibtex-family">@article{wu2026vlanextfamily,
+}</span>
+
+<span id="cite-family">@article{wu2026vlanextfamily,
   title={VLANeXt Family: A Systematic Study of VLA Models from Core Recipes to Emerging Paradigms},
   author={Xiao-Ming Wu and Kang Liao and Yihang Luo and Bin Fan and Jian-jian Jiang and Runze Yang and Zhonghua Wu and Wei-Shi Zheng and Chen Change Loy},
   journal={Preprint},
   year={2026},
   url={https://dravenalg.github.io/projects/VLANeXt/VLANeXt-Family.pdf}
-}</code></pre>
+}</span></code></pre>
         </article>
         <p class="copy-status" role="status" aria-live="polite"></p>
       </div>
