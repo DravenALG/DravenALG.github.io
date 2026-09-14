@@ -93,7 +93,7 @@ h1 span { color: var(--blue); }
 .section-kicker { margin-bottom: 12px; }
 .section-heading h2 { margin-bottom: 0; }
 .section-heading > p { margin-bottom: 2px; color: var(--muted); font-size: 17px; }
-.metrics-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-bottom: 50px; padding-block: 25px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.metrics-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin-bottom: 50px; padding-block: 25px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .metrics-grid > div { padding: 4px 24px; border-right: 1px solid var(--line); }
 .metrics-grid > div:first-child { padding-left: 0; }
 .metrics-grid > div:last-child { border-right: 0; }
@@ -208,8 +208,9 @@ figcaption { padding: 15px 22px; border-top: 1px solid var(--line); color: var(-
   .paper-card h2 { font-size: 23px; }
   .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-block: 10px; }
   .metrics-grid > div { padding: 20px !important; }
-  .metrics-grid > div:nth-child(2) { border-right: 0; }
-  .metrics-grid > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .metrics-grid > div:nth-child(even) { border-right: 0; }
+  .metrics-grid > div:nth-child(-n+4) { border-bottom: 1px solid var(--line); }
+  .metrics-grid > div:last-child { grid-column: 1 / -1; text-align: center; }
   .roadmap-layout { grid-template-columns: minmax(0, 1fr); gap: 35px; }
   .roadmap-figure { width: min(100%, 560px); margin-inline: auto; }
   .roadmap-story { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
