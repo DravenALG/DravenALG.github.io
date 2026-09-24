@@ -86,6 +86,7 @@ h1 span { color: var(--blue); }
 .paper-description { margin-bottom: 18px; color: var(--muted); font-size: 15px; line-height: 1.6; }
 .paper-links { display: flex; flex-wrap: wrap; gap: 22px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; font-weight: 700; }
 .paper-links a { padding-block: 4px; }
+.paper-status { padding-block: 4px; color: var(--muted); }
 .affiliations { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px 18px; margin: 20px auto 6px; max-width: 1050px; color: var(--muted); font-size: 14px; }
 .correspondence { margin-bottom: 0; color: var(--muted); font-size: 12px; }
 
