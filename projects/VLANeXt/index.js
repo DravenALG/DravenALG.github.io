@@ -29,7 +29,7 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const saveData = Boolean(navigator.connection && navigator.connection.saveData);
   const videoState = new WeakMap();
-  const videos = document.querySelectorAll('video');
+  const videos = document.querySelectorAll('.demo-card video');
   const videoObserver = new IntersectionObserver((entries) => {
     entries.forEach(({ target: video, isIntersecting }) => {
       const state = videoState.get(video);
