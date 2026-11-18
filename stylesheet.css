@@ -83,6 +83,36 @@
   --section-spacing: 28px;
 }
 
+/* A silent, inline scene beside the complete profile; scrolls with the page. */
+.profile-overview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-details { flex: 1; min-width: 0; }
+.profile-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.profile-links a { margin-left: 0; white-space: nowrap; }
+.robot-background { display: none; flex: 0 0 264px; width: 264px; transform: translateY(-6px); }
+.robot-background[hidden] { display: none; }
+
+@media (min-width: 960px) {
+  .robot-background:not([hidden]) { display: block; }
+}
+
+.robot-viewport {
+  width: 100%;
+  height: 228px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 62%, rgba(94, 179, 242, .1), rgba(133, 204, 249, .035) 42%, transparent 70%);
+}
+.robot-viewport canvas { display: block; width: 100%; height: 100%; }
+.robot-viewport canvas:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 2px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html body { animation: none; opacity: 1; }
+}
+
 /* --- Global Typography & Base Styles --- */
 html {
   scroll-behavior: smooth;
@@ -110,8 +140,8 @@ p {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 a {
@@ -328,6 +358,7 @@ h3 {
 
 .profile-info {
   flex: 1;
+  min-width: 0;
 }
 
 .name {
@@ -820,6 +851,8 @@ footer {
     align-items: center;
     text-align: center;
   }
+
+  .profile-links { justify-content: center; }
 
   .profile-photo {
     max-width: 150px;

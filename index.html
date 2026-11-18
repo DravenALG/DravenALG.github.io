@@ -6,10 +6,13 @@
   <meta name="author" content="Xiao-Ming Wu">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/Naruto.png" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261119-profile-links">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {"imports":{"three":"./assets/vendor/three/three.module.min.js"}}
+  </script>
 </head>
 
 <body>
@@ -38,20 +41,27 @@
          <img src="images/myself.png" class="profile-photo" alt="Xiao-Ming Wu">
       </div>
       <div class="profile-info">
-        <div class="name">
-          Xiao-Ming Wu <span class="chinese_name">伍晓鸣</span>
+        <div class="profile-overview">
+          <div class="profile-details">
+            <div class="name">
+              Xiao-Ming Wu <span class="chinese_name">伍晓鸣</span>
+            </div>
+            <p>PhD Student</p>
+            <p>MMLab@NTU</p>
+            <p>xiaoming.wu@ntu.edu.sg</p>
+            <p class="profile-links">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=Li7oZpsAAAAJ" target="_blank">
+                [<span class="gs-blue">G</span><span class="gs-red">o</span><span class="gs-yellow">o</span><span class="gs-blue">g</span><span class="gs-green">l</span><span class="gs-red">e</span> Scholar]
+              </a>
+              <a href="https://github.com/DravenALG" target="_blank" class="github-link">[GitHub]</a>
+              <a href="https://x.com/DRAVEN_ALG" target="_blank" rel="noopener noreferrer" class="x-link">[𝕏]</a>
+              <a href="https://www.linkedin.com/in/xiao-ming-wu-ab9088233" target="_blank" rel="noopener noreferrer" class="linkedin-link">[LinkedIn]</a>
+            </p>
+          </div>
+          <div id="robot-background" class="robot-background" aria-label="Interactive Franka Panda scene" hidden>
+            <div class="robot-viewport"></div>
+          </div>
         </div>
-        <p>PhD Student</p>
-        <p>MMLab@NTU</p>
-        <p>xiaoming.wu@ntu.edu.sg</p>
-        <p>
-          <a href="https://scholar.google.com/citations?hl=zh-CN&user=Li7oZpsAAAAJ" target="_blank">
-            [<span class="gs-blue">G</span><span class="gs-red">o</span><span class="gs-yellow">o</span><span class="gs-blue">g</span><span class="gs-green">l</span><span class="gs-red">e</span> Scholar]
-          </a>
-          <a href="https://github.com/DravenALG" target="_blank" class="github-link">[GitHub]</a>
-          <a href="https://x.com/DRAVEN_ALG" target="_blank" rel="noopener noreferrer" class="x-link">[𝕏]</a>
-          <a href="https://www.linkedin.com/in/xiao-ming-wu-ab9088233" target="_blank" rel="noopener noreferrer" class="linkedin-link">[LinkedIn]</a>
-        </p>
       </div>
     </section>
 
@@ -137,5 +147,6 @@
   </main>
 
   <script src="script.js?v=github-stars-20260619"></script>
+  <script type="module" src="robot-background.js?v=20261119-studio"></script>
 </body>
 </html>
