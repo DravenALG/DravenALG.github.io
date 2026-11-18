@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     sections.forEach(section => loadSection(section.id, section.url));
+    window.addEventListener('hashchange', revealPublicationYear);
 });
 
 // Function to load external HTML content
@@ -31,6 +32,10 @@ function loadSection(elementId, url) {
         .then(data => {
             element.innerHTML = data;
             loadGitHubStars(element);
+            if (elementId === 'fullPublications') {
+                initPublicationArchive(element);
+                revealPublicationYear();
+            }
         })
         .catch(error => {
             console.error(`Error loading section ${elementId}:`, error);
@@ -139,14 +144,55 @@ function parseStarCount(value) {
     return Math.round(amount * multiplier);
 }
 
+// Native details elements keep each year independently collapsible.
+function initPublicationArchive(archive) {
+    archive.addEventListener('click', function(event) {
+        const actionButton = event.target.closest('[data-publication-action]');
+        if (actionButton) {
+            const expand = actionButton.dataset.publicationAction === 'expand';
+            // Use the latest available year if this year's papers are not listed yet.
+            const currentYear = archive.querySelector(`#publications-${new Date().getFullYear()}`)
+                || archive.querySelector('.publication-year');
+            archive.querySelectorAll('.publication-year').forEach(year => {
+                year.open = expand || year === currentYear;
+            });
+            return;
+        }
+
+        const yearLink = event.target.closest('.publication-year-nav a');
+        if (yearLink) {
+            const year = document.getElementById(yearLink.hash.slice(1));
+            if (year) year.open = true;
+        }
+    });
+}
+
+// Support direct links even though the full list is loaded asynchronously.
+function revealPublicationYear() {
+    if (!/^#publications-\d{4}$/.test(window.location.hash)) return;
+
+    const year = document.getElementById(window.location.hash.slice(1));
+    if (!year || !year.matches('.publication-year')) return;
+
+    showFullList(false);
+    year.open = true;
+    year.scrollIntoView({ block: 'start' });
+}
+
 // Publications toggle function
-function showFullList() {
+function showFullList(expandAll = true) {
     document.getElementById('selectedPublications').style.display = 'none';
     document.getElementById('fullPublications').style.display = 'block';
     document.getElementById('showFullListBtn').style.display = 'none';
     document.getElementById('showSelectedListBtn').style.display = 'inline';
 
-    updatePubHeader('Below are my full publications & maniscripts.');
+    if (expandAll) {
+        document.querySelectorAll('#fullPublications .publication-year').forEach(year => {
+            year.open = true;
+        });
+    }
+
+    updatePubHeader('My publications & manuscripts, organized by year.');
 }
 
 function showSelectedList() {
@@ -155,7 +201,7 @@ function showSelectedList() {
     document.getElementById('showFullListBtn').style.display = 'inline';
     document.getElementById('showSelectedListBtn').style.display = 'none';
 
-    updatePubHeader('Below are my selected publications & maniscripts.');
+    updatePubHeader('Below are my selected publications & manuscripts.');
 }
 
 function updatePubHeader(desc) {
