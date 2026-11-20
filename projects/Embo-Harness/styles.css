@@ -24,6 +24,8 @@
 .opening-title,.opening-shade{display:none}
 .scroll-hero{--hero-morph:0;--paper-reveal:0;--opening-reveal:1;height:172svh}
 .scroll-hero .hero{position:sticky;top:0;min-height:0;overflow:visible}
+.scroll-hero.opening-complete{height:100svh}
+.scroll-hero.opening-complete .hero{position:relative}
 .scroll-hero .hero-frame{inset:calc(var(--hero-morph)*var(--hero-header)) calc(var(--hero-morph)*var(--hero-inset)) calc(var(--hero-morph)*var(--hero-bottom));border-radius:calc(var(--hero-morph)*var(--hero-radius))}
 .scroll-hero .opening-header{opacity:var(--paper-reveal)}
 .scroll-hero .hero-shade{opacity:var(--paper-reveal)}
@@ -79,7 +81,7 @@
  .scroll-hero .hero-content,.scroll-hero .opening-title{transform:none}
 }
 @media print{
- .hero-stage,.scroll-hero{height:auto}
+ .hero-stage,.scroll-hero,.scroll-hero.opening-complete{height:auto}
  .hero-stage .hero{height:auto;min-height:0;position:relative}
  .hero-frame{position:relative;inset:auto!important;border-radius:0!important;background:#fff}
  .opening-title,.opening-shade,.opening-header{display:none!important}

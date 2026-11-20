@@ -41,13 +41,17 @@
     const cue = stage.querySelector('.scroll-cue');
     const clamp = value => Math.max(0, Math.min(1, value));
     const ease = value => { const t=clamp(value); return t*t*(3-2*t); };
-    let progress=0, scheduled=false;
+    let progress=0, scheduled=false, openingComplete=false;
     stage.classList.add('scroll-hero');
     function updateOpening() {
       scheduled=false;
+      if (openingComplete) return;
       const bounds=stage.getBoundingClientRect();
       const distance=stage.offsetHeight-screen.offsetHeight;
-      progress=clamp(-bounds.top/Math.max(1,distance));
+      // The opening only advances; scrolling back never expands the video again.
+      progress=Math.max(progress,clamp(-bounds.top/Math.max(1,distance)));
+      const finish=distance>0 && -bounds.top>=distance-1;
+      if (finish) progress=1;
       // Leave a short resting point with the paper details fully revealed.
       const morph=reduced.matches ? Number(progress>0.15) : ease(progress/0.82);
       const paper=reduced.matches ? Number(progress>0.15) : ease((progress-0.28)/0.5);
@@ -58,6 +62,13 @@
       header.inert=paper<0.95;
       cue.href=progress<0.9 ? '#paper' : '#overview';
       cue.setAttribute('aria-label',progress<0.9 ? 'Explore Embo-Harness' : 'Watch the presentation');
+      if (finish) {
+        openingComplete=true;
+        const scrollTop=window.scrollY;
+        // Remove the consumed scroll space without moving the visible content.
+        stage.classList.add('opening-complete');
+        window.scrollTo({top:Math.max(0,scrollTop-distance),behavior:'instant'});
+      }
     }
     function scheduleOpening() {
       if (!scheduled) { scheduled=true; requestAnimationFrame(updateOpening); }
