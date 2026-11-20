@@ -35,6 +35,44 @@
   const hero = document.querySelector('#hero-video');
   const heroButton = document.querySelector('.hero-toggle');
   if (hero) {
+    const stage = document.querySelector('.hero-stage');
+    const screen = stage.querySelector('.hero');
+    const header = stage.querySelector('.opening-header');
+    const cue = stage.querySelector('.scroll-cue');
+    const clamp = value => Math.max(0, Math.min(1, value));
+    const ease = value => { const t=clamp(value); return t*t*(3-2*t); };
+    let progress=0, scheduled=false;
+    stage.classList.add('scroll-hero');
+    function updateOpening() {
+      scheduled=false;
+      const bounds=stage.getBoundingClientRect();
+      const distance=stage.offsetHeight-screen.offsetHeight;
+      progress=clamp(-bounds.top/Math.max(1,distance));
+      // Leave a short resting point with the paper details fully revealed.
+      const morph=reduced.matches ? Number(progress>0.15) : ease(progress/0.82);
+      const paper=reduced.matches ? Number(progress>0.15) : ease((progress-0.28)/0.5);
+      const opening=reduced.matches ? 1-paper : 1-ease(progress/0.42);
+      stage.style.setProperty('--hero-morph',morph.toFixed(4));
+      stage.style.setProperty('--paper-reveal',paper.toFixed(4));
+      stage.style.setProperty('--opening-reveal',opening.toFixed(4));
+      header.inert=paper<0.95;
+      cue.href=progress<0.9 ? '#paper' : '#overview';
+      cue.setAttribute('aria-label',progress<0.9 ? 'Explore Embo-Harness' : 'Watch the presentation');
+    }
+    function scheduleOpening() {
+      if (!scheduled) { scheduled=true; requestAnimationFrame(updateOpening); }
+    }
+    window.addEventListener('scroll',scheduleOpening,{passive:true});
+    window.addEventListener('resize',scheduleOpening,{passive:true});
+    window.addEventListener('pageshow',scheduleOpening);
+    reduced.addEventListener('change',scheduleOpening);
+    cue.addEventListener('click',event=> {
+      if (progress>=0.9) return;
+      event.preventDefault();
+      const top=window.scrollY+stage.getBoundingClientRect().top;
+      window.scrollTo({top:top+stage.offsetHeight-screen.offsetHeight,behavior:reduced.matches?'instant':'smooth'});
+    });
+    updateOpening();
     observeVideo(hero);
     const updateHero = () => {
       const paused = hero.paused;
@@ -151,9 +189,6 @@
     track.addEventListener('keydown',event=>{if(event.target===track&&(event.key==='ArrowLeft'||event.key==='ArrowRight')){event.preventDefault();step(event.key==='ArrowRight'?1:-1);}});
     new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;},{threshold:0.15}).observe(section);
     setInterval(()=>{if(visible&&!hovered&&!interacting&&!userPaused&&!reduced.matches&&!saveData&&!document.hidden&&!modalOpen&&!section.contains(document.activeElement))step(1);},7000);
-  });
-  document.querySelectorAll('[data-mosaic]').forEach(mosaic=>{
-    data[mosaic.dataset.mosaic].slice(0,4).forEach(item=>{const img=document.createElement('img');img.src=asset(item.poster);img.alt='';img.loading='lazy';img.decoding='async';img.width=960;img.height=270;mosaic.append(img);});
   });
   if(isGallery) {
     const controls=[...document.querySelectorAll('.gallery-tabs [role=tab]')];
