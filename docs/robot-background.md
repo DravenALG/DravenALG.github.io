@@ -1,4 +1,11 @@
-# Franka background
+# Franka background (archived)
+
+The 3D scene has been removed from the homepage. `index.html` no longer includes
+the scene host, the Three.js import map, or the robot bootstrap script, and the
+homepage stylesheet no longer reserves space for a canvas. Visiting the homepage
+does not load the robot model or its rendering dependencies.
+
+The files and notes below document the archived implementation.
 
 ### Local preview
 
@@ -7,12 +14,12 @@ Run `python3 -m http.server 8765` from this directory, then open
 
 ### Franka background
 
-The scene is at most 208 CSS pixels wide, with a 22:19 aspect ratio, and sits
-beside the complete profile text (name, affiliation, email, and social links).
-On desktop, the text column reserves its full content width so all four social
-links stay on one line below the email; the scene can shrink when space is tight.
-On smaller screens, links can still wrap as whole links. The scene remains
-inside the profile row, lifted 6 px for alignment. A rounded silver workbench,
+The scene is 208 CSS pixels wide, with a 22:19 aspect ratio, and sits
+beside the portrait and profile details (affiliation, email, and social links),
+below the name and research tagline in the homepage hero. The desktop profile
+row has enough space for all four social links; on smaller screens, links can
+wrap as whole links. The scene remains vertically centered inside the profile
+row, against the hero's light gray background. A rounded silver workbench,
 fine blue grid, illuminated edge, and cool rim lighting give it a subtle studio
 look. Rounded blocks retain the original grasp dimensions. All decorative
 overlays are excluded from pointer picking. It scrolls with the page and has no visible captions or

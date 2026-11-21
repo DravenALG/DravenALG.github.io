@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    initNavigation();
     watchGitHubStars();
     loadGitHubStars(document);
 
@@ -16,6 +17,46 @@ document.addEventListener('DOMContentLoaded', function() {
     sections.forEach(section => loadSection(section.id, section.url));
     window.addEventListener('hashchange', revealPublicationYear);
 });
+
+// The mobile menu keeps normal anchor navigation and keyboard focus intact.
+function initNavigation() {
+    const toggle = document.querySelector('.nav-toggle');
+    const navigation = document.getElementById('primary-navigation');
+    const header = document.querySelector('.fixed-header');
+    if (!toggle || !navigation || !header) return;
+
+    function setOpen(open) {
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.querySelector('.nav-toggle-label').textContent = open ? 'Close' : 'Menu';
+        navigation.dataset.open = String(open);
+    }
+
+    toggle.hidden = false;
+    document.body.classList.add('navigation-ready');
+    toggle.addEventListener('click', () => {
+        setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    navigation.addEventListener('click', event => {
+        const link = event.target.closest('a[href^="#"]');
+        if (!link || toggle.getAttribute('aria-expanded') !== 'true') return;
+        setOpen(false);
+        const destination = document.getElementById(link.hash.slice(1));
+        if (destination) {
+            destination.setAttribute('tabindex', '-1');
+            destination.focus({ preventScroll: true });
+        }
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+            setOpen(false);
+            toggle.focus();
+        }
+    });
+    document.addEventListener('click', event => {
+        if (!header.contains(event.target)) setOpen(false);
+    });
+    window.matchMedia('(min-width: 761px)').addEventListener('change', () => setOpen(false));
+}
 
 // Function to load external HTML content
 function loadSection(elementId, url) {
@@ -181,10 +222,12 @@ function revealPublicationYear() {
 
 // Publications toggle function
 function showFullList(expandAll = true) {
+    const shouldMoveFocus = document.activeElement === document.getElementById('showFullListBtn');
     document.getElementById('selectedPublications').style.display = 'none';
     document.getElementById('fullPublications').style.display = 'block';
     document.getElementById('showFullListBtn').style.display = 'none';
-    document.getElementById('showSelectedListBtn').style.display = 'inline';
+    document.getElementById('showSelectedListBtn').style.display = 'inline-flex';
+    if (shouldMoveFocus) document.getElementById('showSelectedListBtn').focus();
 
     if (expandAll) {
         document.querySelectorAll('#fullPublications .publication-year').forEach(year => {
@@ -193,15 +236,19 @@ function showFullList(expandAll = true) {
     }
 
     updatePubHeader('My publications & manuscripts, organized by year.');
+    document.getElementById('publication-title').textContent = 'All publications.';
 }
 
 function showSelectedList() {
+    const shouldMoveFocus = document.activeElement === document.getElementById('showSelectedListBtn');
     document.getElementById('selectedPublications').style.display = 'block';
     document.getElementById('fullPublications').style.display = 'none';
-    document.getElementById('showFullListBtn').style.display = 'inline';
+    document.getElementById('showFullListBtn').style.display = 'inline-flex';
     document.getElementById('showSelectedListBtn').style.display = 'none';
+    if (shouldMoveFocus) document.getElementById('showFullListBtn').focus();
 
     updatePubHeader('Below are my selected publications & manuscripts.');
+    document.getElementById('publication-title').textContent = 'Selected publications.';
 }
 
 function updatePubHeader(desc) {

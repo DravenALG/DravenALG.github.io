@@ -4,26 +4,30 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Xiao-Ming Wu</title>
   <meta name="author" content="Xiao-Ming Wu">
+  <meta name="description" content="Xiao-Ming Wu, PhD student at MMLab, Nanyang Technological University. Research in computer vision, embodied AI, and robotic foundation models.">
+  <meta name="theme-color" content="#f5f5f7">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/Naruto.png" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261121-profile-balance">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261122-research-focus">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
-  <script type="importmap">
-    {"imports":{"three":"./assets/vendor/three/three.module.min.js"}}
-  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <!-- Header -->
   <header class="fixed-header">
     <div class="header-container">
-      <a href="https://dravenalg.github.io" class="header-logo-link">
-        <img src="images/Naruto.png" class="header_icon" alt="Icon"> Xiao-Ming Wu
+      <a href="#top" class="header-logo-link" aria-label="Xiao-Ming Wu, back to top">
+        <img src="images/Naruto.png" class="header_icon" alt="" width="24" height="24"> Xiao-Ming Wu
       </a>
-      <nav>
-        <a href="#bio">Bio</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" hidden>
+        <span class="nav-toggle-label">Menu</span><span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+      <nav id="primary-navigation" aria-label="Main navigation">
+        <a href="#bio">About</a>
+        <a href="#research">Research</a>
         <a href="#publication">Publications</a>
         <a href="#projects-section">Projects</a>
         <a href="#services-section">Services</a>
@@ -33,41 +37,41 @@
   </header>
 
   <!-- Main Content -->
-  <main class="container">
+  <main id="main-content">
     
     <!-- Profile Section -->
-    <section class="profile-section section-container">
-      <div class="profile-photo-wrapper">
-         <img src="images/myself.png" class="profile-photo" alt="Xiao-Ming Wu">
-      </div>
-      <div class="profile-info">
-        <div class="profile-overview">
-          <div class="profile-details">
-            <div class="name">
-              Xiao-Ming Wu <span class="chinese_name">伍晓鸣</span>
-            </div>
-            <p>PhD Student</p>
-            <p>MMLab@NTU</p>
-            <p>xiaoming.wu@ntu.edu.sg</p>
-            <p class="profile-links">
-              <a href="https://scholar.google.com/citations?hl=zh-CN&user=Li7oZpsAAAAJ" target="_blank">
-                [<span class="gs-blue">G</span><span class="gs-red">o</span><span class="gs-yellow">o</span><span class="gs-blue">g</span><span class="gs-green">l</span><span class="gs-red">e</span> Scholar]
-              </a>
-              <a href="https://github.com/DravenALG" target="_blank" class="github-link">[GitHub]</a>
-              <a href="https://x.com/DRAVEN_ALG" target="_blank" rel="noopener noreferrer" class="x-link">[𝕏]</a>
+    <section id="top" class="profile-section" aria-labelledby="profile-name">
+      <div class="container hero-inner">
+        <div class="profile-photo-wrapper">
+          <img src="images/myself.png" class="profile-photo" alt="Xiao-Ming Wu" width="224" height="224" fetchpriority="high">
+        </div>
+        <div class="profile-details">
+            <h1 id="profile-name" class="name">Xiao-Ming Wu <span class="chinese_name" lang="zh">伍晓鸣</span></h1>
+            <p class="hero-subtitle">Research is for curiosity and fun.</p>
+            <p class="profile-role">PhD Student <span>at</span> <a href="https://www.mmlab-ntu.com/index.html" target="_blank" rel="noopener noreferrer">MMLab@NTU</a></p>
+            <p class="profile-affiliation">Nanyang Technological University, Singapore</p>
+            <a class="profile-email" href="mailto:xiaoming.wu@ntu.edu.sg">xiaoming.wu@ntu.edu.sg</a>
+            <div class="profile-links" aria-label="Find me online">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=Li7oZpsAAAAJ" target="_blank" rel="noopener noreferrer" class="scholar-link">[<span class="gs-blue">G</span><span class="gs-red">o</span><span class="gs-yellow">o</span><span class="gs-blue">g</span><span class="gs-green">l</span><span class="gs-red">e</span> Scholar]</a>
+              <a href="https://github.com/DravenALG" target="_blank" rel="noopener noreferrer" class="github-link">[GitHub]</a>
+              <a href="https://x.com/DRAVEN_ALG" target="_blank" rel="noopener noreferrer" class="x-link" aria-label="X, formerly Twitter">[𝕏]</a>
               <a href="https://www.linkedin.com/in/xiao-ming-wu-ab9088233" target="_blank" rel="noopener noreferrer" class="linkedin-link">[LinkedIn]</a>
-            </p>
-          </div>
-          <div id="robot-background" class="robot-background" aria-label="Interactive Franka Panda scene" hidden>
-            <div class="robot-viewport"></div>
+            </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#publication">Explore research</a>
           </div>
         </div>
       </div>
     </section>
 
+    <div class="container page-content">
     <!-- Bio -->
-    <section id="bio" class="section-container">
-      <h2>Biography</h2>
+    <section id="bio" class="section-container biography-section" aria-labelledby="bio-title">
+      <div class="section-heading">
+        <p class="eyebrow">A little about me</p>
+        <h2 id="bio-title">Biography.</h2>
+      </div>
+      <div class="biography-copy">
       <p>
         I am currently a PhD Student at <a href="https://www.mmlab-ntu.com/index.html" target="_blank">MMLab@NTU</a>, <a href="https://www.ntu.edu.sg/computing" target="_blank">College of Computing and Data Science</a> in <a href="https://www.ntu.edu.sg" target="_blank">Nanyang Technological University, Singapore</a>, supervised by Prof. <a href="https://www.mmlab-ntu.com/person/ccloy" target="_blank">Chen Change Loy</a>.
       </p>
@@ -78,19 +82,28 @@
       <p>
         I obtained my B.Eng. degree in <a href="https://www.sdu.edu.cn/index.htm" target="_blank">Shandong University</a>. At that time, I had my first attempt on research and cultivated the interest in it, advised by Prof. <a href="http://mima.sdu.edu.cn/Members/xinshunxu/index.htm" target="_blank">Xin-Shun Xu</a> and Associate Prof. <a href="https://faculty.sdu.edu.cn/luoxin/zh_CN/index.htm" target="_blank">Xin Luo</a>.
       </p>
+      </div>
     </section>
 
     <!-- Research Interests -->
-    <section class="section-container">
-      <h2>Research Interests</h2>
-      <p><em>Research is for curiosity and fun.</em></p>
-      <p>I am interested in <strong>Deep Learning</strong>, <strong>Computer Vision</strong> and <strong>Embodied AI</strong>. 
-      </p>
-      <p>
-        Now I am mainly working on <strong>Robotics Agentic Harness</strong>, <strong>Vision-Language-Action Models (VLA)</strong> and <strong>World Action Models (WAM)</strong>,
-        hoping to build general-purpose, efficient <strong>Robotic Foundation Models (RFMs)</strong> in the future.
-      </p>
-      </section>
+    <section id="research" class="section-container research-section" aria-labelledby="research-title">
+      <div class="section-heading">
+        <p class="eyebrow">Looking ahead</p>
+        <h2 id="research-title">Research interests.</h2>
+      </div>
+      <div class="research-content">
+        <p class="research-intro">I am interested in <strong>Deep Learning</strong>, <strong>Computer Vision</strong> and <strong>Embodied AI</strong>.</p>
+        <div class="research-focus">
+          <p class="eyebrow">Currently exploring</p>
+          <ul>
+            <li>Robotics Agentic Harness</li>
+            <li>Vision-Language-Action Models <span>VLA</span></li>
+            <li>World Action Models <span>WAM</span></li>
+          </ul>
+        </div>
+        <p class="research-vision">Hoping to build general-purpose, efficient <strong>Robotic Foundation Models</strong>.</p>
+      </div>
+    </section>
 
     <!-- News -->
     <section id="news-section" class="section-container">
@@ -100,17 +113,20 @@
     <!-- Publications -->
     <section id="publication" class="section-container">
       <div id="publications-header">
-        <h2 id="publication-title">Publications</h2>
+        <div class="publications-heading">
+        <p class="eyebrow">Research</p>
+        <h2 id="publication-title">Selected publications.</h2>
         <p id="publication-desc">
           Below are my selected publications & manuscripts.
         </p>
         <p class="publication-note">
           Note: <strong>&</strong> = equal contribution, <strong>*</strong> = corresponding author.
         </p>
-        <p>
-          <button id="showFullListBtn" class="toggle-button" onclick="showFullList()">[Show Full List]</button>
-          <button id="showSelectedListBtn" class="toggle-button" onclick="showSelectedList()" style="display:none;">[Show Selected List]</button>
-        </p>
+        </div>
+        <div class="publication-actions">
+          <button id="showFullListBtn" class="toggle-button" type="button" onclick="showFullList()" aria-controls="fullPublications">View all publications</button>
+          <button id="showSelectedListBtn" class="toggle-button" type="button" onclick="showSelectedList()" aria-controls="selectedPublications" style="display:none;">View selected publications</button>
+        </div>
       </div>
       <div id="selectedPublications">Loading Selected Publications...</div>
       <div id="fullPublications" style="display:none;">Loading Full Publications...</div>
@@ -121,32 +137,35 @@
       <p>Loading projects...</p>
     </section>
 
-    <!-- Awards -->
-    <section id="awards-section" class="section-container">
-      <p>Loading awards...</p>
-    </section>
+    <div class="community-grid">
+      <section id="awards-section" class="section-container community-panel">
+        <p>Loading awards...</p>
+      </section>
+      <section id="services-section" class="section-container community-panel">
+        <p>Loading services...</p>
+      </section>
+    </div>
 
-    <!-- Teaching -->
-    <section id="teaching-section" class="section-container">
+    <section id="teaching-section" class="section-container teaching-section">
       <p>Loading teaching...</p>
-    </section>
-
-    <!-- Services -->
-    <section id="services-section" class="section-container">
-      <p>Loading services...</p>
     </section>
 
     <!-- Footer -->
     <footer>
+      <div class="footer-top">
+        <a class="footer-name" href="#top">Xiao-Ming Wu <span lang="zh">伍晓鸣</span></a>
+      </div>
+      <p class="visitor-count">
       <a href="https://www.easycounter.com/">
         <img src="https://www.easycounter.com/counter.php?dravenalg" alt="page counter" class="footer-icon">
       </a> 
       unique visitors since July 2025.
+      </p>
     </footer>
 
+    </div>
   </main>
 
-  <script src="script.js?v=github-stars-20260619"></script>
-  <script type="module" src="robot-background.js?v=20261119-studio"></script>
+  <script src="script.js?v=20261122-refined"></script>
 </body>
 </html>
