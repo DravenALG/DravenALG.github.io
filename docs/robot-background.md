@@ -7,9 +7,11 @@ Run `python3 -m http.server 8765` from this directory, then open
 
 ### Franka background
 
-The 264 × 228 CSS pixel scene sits directly beside the complete profile text
-(name, affiliation, email, and social links). Social links stay directly below
-the email and wrap as whole links within the text column. The scene remains
+The scene is at most 208 CSS pixels wide, with a 22:19 aspect ratio, and sits
+beside the complete profile text (name, affiliation, email, and social links).
+On desktop, the text column reserves its full content width so all four social
+links stay on one line below the email; the scene can shrink when space is tight.
+On smaller screens, links can still wrap as whole links. The scene remains
 inside the profile row, lifted 6 px for alignment. A rounded silver workbench,
 fine blue grid, illuminated edge, and cool rim lighting give it a subtle studio
 look. Rounded blocks retain the original grasp dimensions. All decorative
