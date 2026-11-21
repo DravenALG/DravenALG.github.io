@@ -152,7 +152,7 @@ h3 { font-size: 1.25rem; }
 .biography-copy { max-width: 76ch; font-size: 1.0625rem; line-height: 1.75; }
 .biography-copy p { margin-bottom: 20px; }
 .biography-copy p:last-child { margin-bottom: 0; }
-.research-section { padding-top: 40px; border-top: 1px solid #e8e8ed; }
+.research-section, #news-section, #publication { padding-top: 40px; border-top: 1px solid #e8e8ed; }
 .research-content { min-width: 0; }
 .research-intro { font-size: 1.0625rem; }
 .research-vision { margin-top: 24px; color: var(--secondary-color); font-size: 1.0625rem; }
@@ -316,7 +316,7 @@ footer { display: flex; justify-content: space-between; align-items: center; gap
   .biography-section, .research-section, #news-section, #projects-section, .teaching-section { grid-template-columns: 1fr; gap: 8px; }
   .biography-copy { font-size: 1rem; }
   h2 { font-size: 2rem; margin-bottom: 20px; }
-  .research-section { padding-top: 32px; }
+  .research-section, #news-section, #publication { padding-top: 32px; }
   .research-focus li { font-size: 1.125rem; }
   #publications-header { flex-direction: column; align-items: flex-start; gap: 20px; margin-bottom: 28px; }
   .research-spotlight { padding: 24px; }
