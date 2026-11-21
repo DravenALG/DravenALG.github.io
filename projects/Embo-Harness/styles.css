@@ -95,3 +95,13 @@
  .scroll-hero .hero-content{opacity:1;transform:none}
  .gallery-links{display:none}
 }
+
+/* Supplementary action trajectory comparisons. */
+.trajectory-panel{margin-top:48px}
+.trajectory-panel h3{font-size:24px}
+.trajectory-panel>p{margin:14px 0 24px;font-size:15px;line-height:1.75;max-width:850px}
+.trajectory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.trajectory-figure{padding:20px}
+.trajectory-figure a{display:block;border-radius:4px}
+.trajectory-figure img{width:100%;height:auto}
+@media(max-width:760px){.trajectory-grid{grid-template-columns:1fr;gap:20px}.trajectory-figure{padding:16px}}
