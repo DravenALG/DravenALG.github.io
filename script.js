@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load all sections
     const sections = [
-        { id: 'news-section', url: 'sections/news.html' },
         { id: 'selectedPublications', url: 'sections/publications_selected.html' },
         { id: 'fullPublications', url: 'sections/publications_full.html' },
         { id: 'teaching-section', url: 'sections/teaching.html' },
@@ -235,8 +234,7 @@ function showFullList(expandAll = true) {
         });
     }
 
-    updatePubHeader('My publications & manuscripts, organized by year.');
-    document.getElementById('publication-title').textContent = 'All publications.';
+    document.getElementById('publication-title').textContent = 'All publications';
 }
 
 function showSelectedList() {
@@ -247,11 +245,5 @@ function showSelectedList() {
     document.getElementById('showSelectedListBtn').style.display = 'none';
     if (shouldMoveFocus) document.getElementById('showFullListBtn').focus();
 
-    updatePubHeader('Below are my selected publications & manuscripts.');
-    document.getElementById('publication-title').textContent = 'Selected publications.';
-}
-
-function updatePubHeader(desc) {
-    const pubDesc = document.getElementById('publication-desc');
-    if (pubDesc) pubDesc.textContent = desc;
+    document.getElementById('publication-title').textContent = 'Selected publications';
 }
