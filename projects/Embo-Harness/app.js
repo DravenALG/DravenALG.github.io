@@ -38,6 +38,7 @@
     const stage = document.querySelector('.hero-stage');
     const screen = stage.querySelector('.hero');
     const header = stage.querySelector('.opening-header');
+    const paperContent = stage.querySelector('.hero-content');
     const cue = stage.querySelector('.scroll-cue');
     const clamp = value => Math.max(0, Math.min(1, value));
     const ease = value => { const t=clamp(value); return t*t*(3-2*t); };
@@ -60,6 +61,7 @@
       stage.style.setProperty('--paper-reveal',paper.toFixed(4));
       stage.style.setProperty('--opening-reveal',opening.toFixed(4));
       header.inert=paper<0.95;
+      paperContent.inert=paper<0.95;
       cue.href=progress<0.9 ? '#paper' : '#overview';
       cue.setAttribute('aria-label',progress<0.9 ? 'Explore Embo-Harness' : 'Watch the presentation');
       if (finish) {
